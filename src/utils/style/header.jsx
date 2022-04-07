@@ -20,18 +20,23 @@ export const HeaderTitle = styled.div`
     font-size: 2em;
 `;
 
+
 export const StyledLink = styled(NavLink)`
     text-decoration: none;
     color: ${colors.grey};
+    padding: 10px 15px 10px 15px;
     &:hover{
-        color: ${colors.primary};
-        text-decoration: underline;
+        border-radius: 20px;
+        box-shadow:inset 0px 0px 0px 3px ${colors.primary};
+        color: ${colors.secondary};
     }
-    color: ${props => 
-        props.className === 'active' ? 'red' : 'yellow'
-    };
+
 `;
 
+
+
+
+  
 
 
 export const HeaderNav = styled.ul`
