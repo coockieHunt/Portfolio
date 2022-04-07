@@ -20,20 +20,18 @@ const Root = createRoot(container)
 
 Root.render(
     <BrowserRouter>
-    <GlobalStyle />
-
-    <MainContainer>
-        <Header />
-        <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/project" element={<Project />} />
-            {/* error page */}
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-    </MainContainer>
-        
+        <GlobalStyle />
+        <MainContainer>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />}/>
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/project" element={<Project />} />
+                {/* error page */}
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+        </MainContainer>
     </BrowserRouter>,
   
 );
