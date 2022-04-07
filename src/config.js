@@ -1,3 +1,3 @@
 export const ENVI = {
-    DIR : " /opt/portfolio"
+    DIR : " /opt/portfolio/src/"
 }

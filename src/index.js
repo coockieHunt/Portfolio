@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
+import { ImportStyle } from './utils/Helper';
 
 //global style
 import {GlobalStyle, MainContainer} from './utils/style/global';
@@ -18,6 +19,7 @@ import Footer from './components/Footer.jsx'
 const container = document.getElementById('root')
 const Root = createRoot(container)
 
+
 Root.render(
     <BrowserRouter>
         <GlobalStyle />
@@ -33,6 +35,7 @@ Root.render(
             <Footer />
         </MainContainer>
     </BrowserRouter>,
-  
 );
+
+console.log(ImportStyle('component', "footer"))
 

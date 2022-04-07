@@ -17,7 +17,7 @@ function Header(){
     return(
         <HeaderContainer>
             <HeaderTitle>
-                {convertTextToUpperCase('<CK>')}
+                {'<ck>'.toUpperCase()}
             </HeaderTitle>
             <HeaderNav>
                 <HeaderNavElement>

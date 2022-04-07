@@ -1,37 +1,22 @@
-
-export function convertTextToUpperCase(DefaultText){
-    return  DefaultText.toUpperCase();
-};
-
+import { ENVI } from "../../config";
 
 export function ImportStyle(Type, Name){
 
-    if(Type || Name === undefined ){ return }
-    
+    if(Type === undefined || Name === undefined) { return ['error', 'parameter not valid'] }
+
     let dir;
     switch(Type){
         case 'component':
-            dir = 'style/compenent/';
+            dir = 'style/components/';
             break
         case 'pages':
             dir =  'style/page/';
             break
         default:
-            return null
+            return ['error', 'type not found']
     }
 
-    return dir + Name
+    return ENVI.DIR + dir + Name
 };
 
-export function FileExist(path){
 
-    console.log(window.location.origin)
-
-    // fs.access(path, fs.F_OK, (err) => {
-    // if (err) {
-    //     console.error(err)
-    //     return
-    // }
-
-    // })
-}
