@@ -1,6 +1,6 @@
 // STYLE FOR Header
 import styled from "styled-components";
-import colors from "./color";
+import colors from "../library/color";
 import {
     NavLink
 } from 'react-router-dom';

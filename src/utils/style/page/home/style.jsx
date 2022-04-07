@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import colors from "./color";
-import { device } from "./size";
+import colors from "../../library/color";
+import { device } from "../../library/size";
 
 export const HomePageContainer = styled.div`
     display: flex;

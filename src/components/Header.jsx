@@ -4,9 +4,9 @@ import {
     HeaderNav, 
     HeaderTitle, 
     HeaderNavElement 
-} from "../utils/style/header"
+} from "../utils/style/components/header"
 
-import { convertTextToUpperCase } from '../utils/Helper/index'
+import { convertTextToUpperCase } from '../utils/Helper'
 
 function IfActive(navData){
     if(navData.isActive){ return 'active'}

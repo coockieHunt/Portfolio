@@ -1,4 +1,4 @@
-import { FooterContainer, FooterBlock} from "../utils/style/footer"
+import { FooterContainer, FooterBlock} from "../utils/style/components/footer"
 import { SiReact } from 'react-icons/si';
 import { GiOutbackHat } from 'react-icons/gi';
 

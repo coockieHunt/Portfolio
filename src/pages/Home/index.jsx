@@ -4,7 +4,7 @@ import{
     HomePickUpSide,
     HomePickUpLogo,
     BackLineSpan
-} from '../../utils/style/home'
+} from '../../utils/style/page/home/style'
 
 import { convertTextToUpperCase } from '../../utils/Helper/index'
 
