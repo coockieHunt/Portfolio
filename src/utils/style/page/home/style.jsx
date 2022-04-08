@@ -8,15 +8,8 @@ export const HomePageContainer = styled.div`
     align-items: center;
     height: 720px;
 
-
     @media ${device.laptop} { 
         flex-direction: column;
-    }
-
-    @media ${device.tablet} { 
-    }
-
-    @media ${device.mobileM} { 
     }
 `;
 
