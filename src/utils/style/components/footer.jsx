@@ -10,7 +10,7 @@ export const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5em;
+    padding: 10px;
 
     @media ${device.laptop} { 
         flex-direction: column;
