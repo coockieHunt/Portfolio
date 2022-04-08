@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+## extension VScode recommended for this project
+https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments (Improve your code commenting by annotating with alert, informational, TODOs, and more!)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
