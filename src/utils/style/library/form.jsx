@@ -46,11 +46,16 @@ export const FormTextArea = styled.textarea `
 export const FormSubmit = styled.input`
     padding : 15px;
     margin-top: 15px;
-    background-color: ${colors.secondary};
+    background-color: ${colors.primary};
     border: none;
     color: ${colors.white};
     text-transform: uppercase;
     border-radius: 3px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: ${colors.secondary};
+    }
 `;
 
 // ? Utils element

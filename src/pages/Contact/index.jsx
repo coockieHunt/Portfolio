@@ -86,7 +86,7 @@ class ContactForm extends React.Component {
                             value={this.state.message} 
                             onChange={this.handleChange}
                             label= "message"
-                            placeHolder="bonjour, &#10;je vous contact pour ... &#10; cordialment jhon doe"
+                            placeHolder="bonjour, &#10;je vous contact pour ... "
                             required
                         />
                         <FormInline>

@@ -30,13 +30,7 @@ export const StyledLink = styled(NavLink)`
         box-shadow:inset 0px 0px 0px 3px ${colors.primary};
         color: ${colors.secondary};
     }
-
 `;
-
-
-
-
-  
 
 
 export const HeaderNav = styled.ul`
