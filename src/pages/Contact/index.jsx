@@ -61,6 +61,7 @@ class ContactForm extends React.Component {
                                 onChange={this.handleChange}
                                 label="Prenon"
                                 placeHolder="jhon"
+                                required
                             /> 
                             <FormInputText 
                                 name="lastname" 
@@ -77,6 +78,7 @@ class ContactForm extends React.Component {
                             onChange={this.handleChange}
                             placeHolder="secteur@domaine.fr"
                             label= "email"
+                            required
                         />
 
                         <FormInputTextArea 
@@ -85,6 +87,7 @@ class ContactForm extends React.Component {
                             onChange={this.handleChange}
                             label= "message"
                             placeHolder="bonjour, &#10;je vous contact pour ... &#10; cordialment jhon doe"
+                            required
                         />
                         <FormInline>
                             <FormSubmit type="submit" value="envoyer" />

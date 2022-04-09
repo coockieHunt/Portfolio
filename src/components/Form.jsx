@@ -18,10 +18,17 @@ import {
  */
 export class FormInputText extends React.Component{
     
+    constructor(props){
+        super(props)
+
+        this.IfLabel = this.IfLabel.bind(this);
+    }
+
     // ? If label label not define, skip render label element
-    IfLabel(label, name){
+    IfLabel(label){
         if(label !== undefined){
-            return <FormLabel htmlFor={name}>{label}</FormLabel>
+            if(this.props.required !== undefined){label = label + " *"}
+            return <FormLabel htmlFor={this.props.name}>{label}</FormLabel>
         }
 
         return <FormLabel>&#x200B;</FormLabel>
@@ -30,12 +37,15 @@ export class FormInputText extends React.Component{
     render() {
         const {name, value, onChange, label, placeHolder} = this.props;
 
-        let LabelElement = this.IfLabel(label, name)
+        let LabelElement = this.IfLabel(label)
 
+        let placeHolderElement = placeHolder
+        if(this.props.required !== undefined && label === undefined){placeHolderElement = placeHolder + " *"}
+        
         return(
             <FormElement>
                 {LabelElement}
-                <FormInput name={name} type="text" placeholder={placeHolder} value={value} onChange={onChange}/>
+                <FormInput name={name} type="text" placeholder={placeHolderElement} value={value} onChange={onChange}/>
             </FormElement>
         )
     }
@@ -53,10 +63,17 @@ export class FormInputText extends React.Component{
  */
  export class FormInputEmail extends React.Component{
     
+    constructor(props){
+        super(props)
+
+        this.IfLabel = this.IfLabel.bind(this);
+    }
+
     // ? If label label not define, skip render label element
-    IfLabel(label, name){
+    IfLabel(label){
         if(label !== undefined){
-            return <FormLabel htmlFor={name}>{label}</FormLabel>
+            if(this.props.required !== undefined){label = label + " *"}
+            return <FormLabel htmlFor={this.props.name}>{label}</FormLabel>
         }
 
         return <FormLabel>&#x200B;</FormLabel>
@@ -65,12 +82,15 @@ export class FormInputText extends React.Component{
     render() {
         const {name, value, onChange, label, placeHolder} = this.props;
 
-        let LabelElement = this.IfLabel(label, name)
+        let LabelElement = this.IfLabel(label)
+
+        let placeHolderElement = placeHolder
+        if(this.props.required !== undefined && label === undefined){placeHolderElement = placeHolder + " *"}
 
         return(
             <FormElement>
                 {LabelElement}
-                <FormInput name={name} type="email" placeholder={placeHolder} value={value} onChange={onChange}/>
+                <FormInput name={name} type="email" placeholder={placeHolderElement} value={value} onChange={onChange}/>
             </FormElement>
         )
     }
@@ -88,10 +108,17 @@ export class FormInputText extends React.Component{
  */
  export class FormInputTextArea extends React.Component{
     
+    constructor(props){
+        super(props)
+
+        this.IfLabel = this.IfLabel.bind(this);
+    }
+
     // ? If label label not define, skip render label element
-    IfLabel(label, name){
+    IfLabel(label){
         if(label !== undefined){
-            return <FormLabel htmlFor={name}>{label}</FormLabel>
+            if(this.props.required !== undefined){label = label + " *"}
+            return <FormLabel htmlFor={this.props.name}>{label}</FormLabel>
         }
 
         return <FormLabel>&#x200B;</FormLabel>
@@ -100,12 +127,15 @@ export class FormInputText extends React.Component{
     render() {
         const {name, value, onChange, label, placeHolder} = this.props;
 
-        let LabelElement = this.IfLabel(label, name)
+        let LabelElement = this.IfLabel(label)
+        
+        let placeHolderElement = placeHolder
+        if(this.props.required !== undefined && label === undefined){placeHolderElement = placeHolder + " *"}
 
         return(
             <FormElement>
                 {LabelElement}
-                <FormTextArea name={name}  placeholder={placeHolder} value={value} onChange={onChange}/>
+                <FormTextArea name={name}  placeholder={placeHolderElement} value={value} onChange={onChange}/>
             </FormElement>
         )
     }
