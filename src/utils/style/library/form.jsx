@@ -31,9 +31,8 @@ export const FormInput = styled.input `
 
 export const FormTextArea = styled.textarea `
     padding: 10px 5px 10px 5px;
-    height: 45vh;
     resize: none;
-
+    height: 400px;
     outline: none;
     border: ${BorderSize} solid ${FormColor};
     border-radius: 3px;
@@ -46,6 +45,7 @@ export const FormTextArea = styled.textarea `
 
 export const FormSubmit = styled.input`
     padding : 15px;
+    margin-top: 15px;
     background-color: ${colors.secondary};
     border: none;
     color: ${colors.white};

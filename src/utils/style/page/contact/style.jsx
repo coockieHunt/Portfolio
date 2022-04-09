@@ -6,6 +6,11 @@ import { device } from "../../library/size";
 export const ContactContainer = styled.div `
     display: flex;
     height: 720px;
+
+    @media ${device.laptop} { 
+        width : 100%;
+        margin: auto;
+    }
 `;
 
 export const ContactFormulaire =  styled.div`
@@ -19,6 +24,7 @@ export const ContactFormulaire =  styled.div`
 
     @media ${device.laptop} { 
         width : 100%;
+        margin: auto;
     }
 
     h1{
