@@ -13,7 +13,6 @@ export const ContactFormulaire =  styled.div`
     width : 40%;
     display: flex;
     flex-direction: column;
-    margin: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
     border-radius: 6px;
@@ -37,4 +36,13 @@ export const ContactSide= styled.div`
         display: none;
     }
 `;
+
+export const ContactTitle= styled.h1`
+    color: ${colors.primary}
+`;
+
+export const ContactContent= styled.p`
+    text-align: justify;
+`;
+
 
