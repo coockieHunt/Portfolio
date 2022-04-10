@@ -21,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${colors.primary};
         color: ${colors.white} !important;
     }
+
+    .react-icons-middel {
+        vertical-align: middle;
+    }
 `
 
 export const MainContainer = styled.div`

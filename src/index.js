@@ -15,6 +15,8 @@ import Project from './pages/Project'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
+import { Alert } from './components/alert';
+
 const container = document.getElementById('root')
 const Root = createRoot(container)
 
@@ -22,6 +24,7 @@ const Root = createRoot(container)
 Root.render(
     <BrowserRouter>
         <GlobalStyle />
+        <Alert type='ok'>ceci et une notification</Alert>
         <MainContainer>
             <Header />
             <Routes>
