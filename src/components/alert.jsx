@@ -11,8 +11,9 @@ export class Alert extends React.Component{
 
     TypeIsNotValid(type){
         let rslt = true;
-        Object.keys(ALERT).map(function (key) {
+        Object.keys(ALERT).map(key => {
             if(key === type){rslt = false}
+	    return null
         });
 
         return rslt
