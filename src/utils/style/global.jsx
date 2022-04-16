@@ -15,13 +15,6 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
-    .active {
-        border-radius: 20px;
-        box-shadow:inset 0px 0px 0px 3px ${colors.primary};
-        background-color: ${colors.primary};
-        color: ${colors.white} !important;
-    }
-
     .react-icons-middel {
         vertical-align: middle;
     }

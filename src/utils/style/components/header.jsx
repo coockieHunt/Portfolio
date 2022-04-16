@@ -27,10 +27,18 @@ export const HeaderLogo = styled.img `
 export const StyledLink = styled(NavLink)`
     text-decoration: none;
     color: ${colors.grey};
-    padding: 10px 15px 10px 15px;
+    &.active {
+        color: ${props => props.className === "accentuated" ? "white !important" : colors.primary}; ;
+        background-color: ${props => props.className === "accentuated" ? colors.primary : null}; ;
+    }
+
+    &.accentuated{
+        box-shadow:inset 0px 0px 0px 2px ${colors.primary};
+        color: ${colors.primary} ;
+        padding: 10px 10px 10px 10px;
+    }
+
     &:hover{
-        border-radius: 20px;
-        box-shadow:inset 0px 0px 0px 3px ${colors.primary};
         color: ${colors.secondary};
     }
 `;

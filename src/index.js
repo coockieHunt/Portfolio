@@ -10,6 +10,7 @@ import NotFound from './pages/Error/NotFound'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Project from './pages/Project'
+import AboutMe from './pages/about/my'
 
 //compenents
 import Header from './components/Header.jsx'
@@ -28,6 +29,7 @@ Root.render(
                 <Route path="/" element={<Home />}/>
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/project" element={<Project />} />
+                <Route path="/about/me" element={<AboutMe />} />
                 {/* error page */}
                 <Route path="*" element={<NotFound />} />
             </Routes>

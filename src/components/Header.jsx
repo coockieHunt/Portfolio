@@ -39,7 +39,8 @@ function Header(){
                 </HeaderNavElement>
                 <HeaderNavElement>
                     <StyledLink 
-                        to='/apropos'
+                        className={"accentuated"}
+                        to='/about/me'
                     >
                     A props de moi
                     </StyledLink>
