@@ -1,23 +1,17 @@
-import{
-    HomePageContainer,
-    HomePickUp,
-    HomePickUpSide,
-    HomePickUpLogo,
-    BackLineSpan
-} from '../../utils/style/page/home/style'
+import * as Home from '../../utils/style/page/home/style'
 
 import NodeLogo from '../../utils/img/logo/Node.js_light.svg'
 
-function Home(){
+function HomePage(){
     return(
-        <HomePageContainer>
-            <HomePickUp>{'développeur full stack'.toUpperCase()}<br/><BackLineSpan>NODE JS</BackLineSpan></HomePickUp>
-            <HomePickUpSide>
-                <HomePickUpLogo src={NodeLogo} alt="Node Js logo" />
-            </HomePickUpSide>
-        </HomePageContainer>
+        <Home.Container>
+            <Home.PickUp>{'développeur full stack'.toUpperCase()}<br/><Home.BackLineSpan>NODE JS</Home.BackLineSpan></Home.PickUp>
+            <Home.PickUpSide>
+                <Home.PickUpLogo src={NodeLogo} alt="Node Js logo" />
+            </Home.PickUpSide>
+        </Home.Container>
     )
 }
 
 
-export default Home
+export default HomePage

@@ -1,8 +1,8 @@
-function Home(){
+function AboutMePage(){
     return(
         <p>hey this page its me</p>
     )
 }
 
 
-export default Home
+export default AboutMePage

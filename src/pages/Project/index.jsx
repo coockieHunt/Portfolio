@@ -7,10 +7,10 @@ const PHText = styled.div`
     padding:30px;
 `;
 
-function Project(){
+function ProjectPage(){
     return(
         <PHText>✍️ List of my project ✍️</PHText>
     )
 }
 
-export default Project
+export default ProjectPage

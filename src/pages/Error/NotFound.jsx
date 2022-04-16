@@ -13,7 +13,7 @@ const Error = styled.div`
     color: red;
 `;
 
-function NotFound(){
+function NotFoundPage(){
     return(
         <div>
      <Teapot src={TeapotLogo} alt="Node Js logo" />
@@ -25,4 +25,4 @@ function NotFound(){
 }
 
 
-export default NotFound
+export default NotFoundPage

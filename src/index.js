@@ -6,11 +6,11 @@ import { createRoot } from 'react-dom/client';
 import {GlobalStyle, MainContainer} from './utils/style/global';
 
 //pages
-import NotFound from './pages/Error/NotFound'
-import Home from './pages/Home'
-import Contact from './pages/Contact'
-import Project from './pages/Project'
-import AboutMe from './pages/about/my'
+import NotFoundPage from './pages/Error/NotFound'
+import HomePage from './pages/Home'
+import ContactPage from './pages/Contact'
+import ProjectPage from './pages/Project'
+import AboutMePage from './pages/about/my'
 
 //compenents
 import Header from './components/Header.jsx'
@@ -26,12 +26,12 @@ Root.render(
         <MainContainer>
             <Header />
             <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/project" element={<Project />} />
-                <Route path="/about/me" element={<AboutMe />} />
+                <Route path="/" element={<HomePage />}/>
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/project" element={<ProjectPage />} />
+                <Route path="/about/me" element={<AboutMePage />} />
                 {/* error page */}
-                <Route path="*" element={<NotFound />} />
+                <Route path="*" element={<NotFoundPage />} />
             </Routes>
             <Footer />
         </MainContainer>

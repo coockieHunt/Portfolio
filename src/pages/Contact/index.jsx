@@ -14,7 +14,7 @@ import {
     FormInputTextArea
 } from "../../components/Form"
 
-class ContactForm extends React.Component {
+class ContactPage extends React.Component {
     DefaultValue = {
         firsName: '',
         lastname: '',
@@ -102,4 +102,4 @@ class ContactForm extends React.Component {
     }
 }
 
-export default ContactForm
+export default ContactPage
