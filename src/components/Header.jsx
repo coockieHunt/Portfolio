@@ -3,21 +3,17 @@ import {
     HeaderContainer,
     HeaderNav, 
     HeaderTitle, 
-    HeaderNavElement 
+    HeaderNavElement ,
+    HeaderLogo
 } from "../utils/style/components/header"
 
-import { convertTextToUpperCase } from '../utils/Helper'
-
-function IfActive(navData){
-    if(navData.isActive){ return 'active'}
-    return null
-}
+import MainLogo from '../utils/img/logo/logo.svg'
 
 function Header(){
     return(
         <HeaderContainer>
             <HeaderTitle>
-                {'<ck>'.toUpperCase()}
+                <HeaderLogo src={MainLogo} alt="Node Js logo" />
             </HeaderTitle>
             <HeaderNav>
                 <HeaderNavElement>
@@ -39,6 +35,13 @@ function Header(){
                         to='/project'
                     >
                     Mes Porject
+                    </StyledLink>
+                </HeaderNavElement>
+                <HeaderNavElement>
+                    <StyledLink 
+                        to='/apropos'
+                    >
+                    A props de moi
                     </StyledLink>
                 </HeaderNavElement>
             </HeaderNav>

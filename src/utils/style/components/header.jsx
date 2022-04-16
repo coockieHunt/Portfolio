@@ -10,14 +10,17 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5em;
+    padding: 10px 0 20px 0;
 `;
 
 export const HeaderTitle = styled.div`
     padding: 10px;
-    font-weight: bold;
     color: ${colors.primary};
-    font-size: 2em;
+`;
+
+export const HeaderLogo = styled.img `
+    filter: ${colors.primary_filter};
+    height: 15px;
 `;
 
 
