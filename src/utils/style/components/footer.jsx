@@ -6,7 +6,7 @@ import { device } from "../library/size";
 
 
 
-export const FooterContainer = styled.div`
+export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +17,7 @@ export const FooterContainer = styled.div`
     }
 `;
 
-export const FooterBlock = styled.div`
+export const Block = styled.div`
     padding: 10px;
     color: ${colors.grey};
     text-align: center;

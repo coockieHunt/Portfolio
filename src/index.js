@@ -14,7 +14,7 @@ import AboutMePage from './pages/about/my'
 
 //compenents
 import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
+import FooterConponents from './components/Footer.jsx'
 
 const container = document.getElementById('root')
 const Root = createRoot(container)
@@ -33,7 +33,7 @@ Root.render(
                 {/* error page */}
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
-            <Footer />
+            <FooterConponents />
         </MainContainer>
     </BrowserRouter>,
 );
