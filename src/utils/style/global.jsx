@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 import styled from "styled-components";
-import colors from './library/color';
-
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -19,7 +17,9 @@ export const GlobalStyle = createGlobalStyle`
         vertical-align: middle;
     }
 `
-
+/*
+    ? main constainer
+*/
 export const MainContainer = styled.div`
     width: 90%;
     height: 100vh;
