@@ -2,7 +2,7 @@ import styled from "styled-components";
 import colors from "../../library/color";
 import { device } from "../../library/size";
 
-export const HomePageContainer = styled.div`
+export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -13,7 +13,7 @@ export const HomePageContainer = styled.div`
     }
 `;
 
-export const HomePickUp  = styled.div`
+export const PickUp  = styled.div`
     color: ${colors.primary};
     font-size: 2em;
     text-align: center;
@@ -21,13 +21,13 @@ export const HomePickUp  = styled.div`
 
 `;
 
-export const HomePickUpSide  = styled.div`
+export const PickUpSide  = styled.div`
     font-size: 10em;
     text-align: center;
     user-select:none;
 `;
 
-export const HomePickUpLogo = styled.img `
+export const PickUpLogo = styled.img `
     height: 350px;
     fill: red;
     filter: ${colors.primary_filter};
