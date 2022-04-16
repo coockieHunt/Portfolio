@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import colors from "../../library/color";
+import shadow from "../../library/shadow";
 import { device } from "../../library/size";
 
 
-export const ContactContainer = styled.div `
+export const Container = styled.div `
     display: flex;
     height: 720px;
 
@@ -11,44 +12,70 @@ export const ContactContainer = styled.div `
         width : 100%;
         margin: auto;
     }
+    box-shadow: ${shadow.fence};
 `;
 
-export const ContactFormulaire =  styled.div`
+export const Form =  styled.div`
     padding: 15px;
-    width : 35%;
+    width : 55%;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
-    border-radius: 6px;
+    border-radius: 6px 0 0 6px;
 
     @media ${device.laptop} { 
         width : 100%;
         margin: auto;
     }
 
-    h1{
+    & h1{
         color: ${colors.primary};
         height: 10%;
         text-align: center;
     }
 `;
 
-export const ContactSide= styled.div`
-    width : 60%;
+export const Side= styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
-
+    margin: 10px;
+    border-radius: 5px;
+    background-color: ${colors.primary};
+    color: ${colors.white};
+    box-shadow: ${shadow.fence};
     @media ${device.laptop} { 
         display: none;
     }
 `;
 
-export const ContactTitle= styled.h1`
-    color: ${colors.primary}
+export const Title= styled.h1`
+    color: ${colors.white};
+    margin: 0 0 30px 0;
 `;
 
-export const ContactContent= styled.p`
-    text-align: justify;
+export const BaseLine= styled.p`
+    font-size: 1em;
 `;
+
+export const Other= styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-grow: 4;
+`;
+
+export const OtherOption= styled.div`
+    display: flex;
+    color: ${colors.white};
+    & svg{
+        font-size: 50px;
+        color: ${colors.secondary};
+        vertical-align: middle;
+    }
+`;
+
 
 
