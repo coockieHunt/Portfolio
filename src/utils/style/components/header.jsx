@@ -6,19 +6,19 @@ import {
 } from 'react-router-dom';
 
 
-export const HeaderContainer = styled.div`
+export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0 20px 0;
 `;
 
-export const HeaderTitle = styled.div`
+export const Title = styled.div`
     padding: 10px;
     color: ${colors.primary};
 `;
 
-export const HeaderLogo = styled.img `
+export const Logo = styled.img `
     filter: ${colors.primary_filter};
     height: 15px;
 `;
@@ -44,11 +44,11 @@ export const StyledLink = styled(NavLink)`
 `;
 
 
-export const HeaderNav = styled.ul`
+export const Nav = styled.ul`
     display: flex;
 `;
 
-export const HeaderNavElement = styled.li`
+export const NavElement = styled.li`
     padding: 10px;
     color: ${colors.secondary};
     font-weight: bold;

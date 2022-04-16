@@ -13,7 +13,7 @@ import ProjectPage from './pages/Project'
 import AboutMePage from './pages/about/my'
 
 //compenents
-import Header from './components/Header.jsx'
+import HeaderComponents from './components/Header.jsx'
 import FooterConponents from './components/Footer.jsx'
 
 const container = document.getElementById('root')
@@ -24,7 +24,7 @@ Root.render(
     <BrowserRouter>
         <GlobalStyle />
         <MainContainer>
-            <Header />
+            <HeaderComponents />
             <Routes>
                 <Route path="/" element={<HomePage />}/>
                 <Route path="/contact" element={<ContactPage />} />
