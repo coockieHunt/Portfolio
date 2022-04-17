@@ -5,7 +5,6 @@ import * as Contact from "../../utils/style/page/contact/style"
 import {
     FormGroupe,
     FormInline,
-    FormSubmit,
 }from "../../utils/style/library/form"
 
 import {
@@ -13,6 +12,9 @@ import {
     FormInputEmail,
     FormInputTextArea
 } from "../../components/Form"
+
+import ButtonConponents from "../../components/button.jsx"
+
 
 class ContactPage extends React.Component {
     DefaultValue = {
@@ -93,7 +95,7 @@ class ContactPage extends React.Component {
                             required
                         />
                         <FormInline>
-                            <FormSubmit type="submit" value="envoyer" />
+                            <ButtonConponents disabled={false} type="submit"  onClick={this.handleSubmit}>envoyer</ButtonConponents>
                         </FormInline>
                     </FormGroupe>
                 </Contact.Form>
