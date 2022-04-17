@@ -7,6 +7,7 @@ import { device } from "../../library/size";
 export const Container = styled.div `
     display: flex;
     height: 720px;
+    weight: 50%;
 
     @media ${device.laptop} { 
         width : 100%;
@@ -17,7 +18,7 @@ export const Container = styled.div `
 
 export const Form =  styled.div`
     padding: 15px;
-    width : 55%;
+    width : 100%;
     display: flex;
     flex-direction: column;
 
@@ -39,12 +40,16 @@ export const Side= styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
+    width: 700px;
+
     background-color: ${colors.primary};
     color: ${colors.white};
     box-shadow: ${shadow.fence};
+   
     @media ${device.laptop} { 
         display: none;
     }
