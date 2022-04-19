@@ -4,17 +4,21 @@ import colors from "../library/color";
 import {
     NavLink
 } from 'react-router-dom';
-
+import { device } from "../library/size";
 
 export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 20px 0;
+    padding: 10px 20px 20px 20px;
+
+    @media ${device.laptop} { 
+        flex-direction: column;
+        padding: 10px 0 10px 0;
+    }
 `;
 
 export const Title = styled.div`
-    padding: 10px;
     color: ${colors.primary};
 `;
 
@@ -46,6 +50,10 @@ export const StyledLink = styled(NavLink)`
 
 export const Nav = styled.ul`
     display: flex;
+    @media ${device.laptop} { 
+        flex-direction: column;
+        text-align: center;
+    }
 `;
 
 export const NavElement = styled.li`

@@ -6,11 +6,12 @@ import { device } from "../../library/size";
 
 export const Container = styled.div `
     display: flex;
-    height: 720px;
     weight: 50%;
+    width : 80%;
+    margin: auto;
 
     @media ${device.laptop} { 
-        width : 100%;
+        width : 90%;
         margin: auto;
     }
     box-shadow: ${shadow.fence};

@@ -5,7 +5,6 @@ import colors from "../library/color";
 import { device } from "../library/size";
 
 
-
 export const Container = styled.div`
     display: flex;
     justify-content: space-between;
