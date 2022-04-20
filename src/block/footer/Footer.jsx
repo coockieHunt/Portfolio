@@ -1,4 +1,4 @@
-import * as Footer from "../utils/style/components/footer"
+import * as Footer from "./style"
 import { SiReact } from 'react-icons/si';
 import { GiOutbackHat } from 'react-icons/gi';
 import { DiJavascript1 } from 'react-icons/di';

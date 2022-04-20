@@ -1,8 +1,8 @@
 // STYLE FOR FOOTER
 import styled from "styled-components";
-import colors from "../library/color";
+import colors from "../../../utils/style/library/color";
 
-import { device } from "../library/size";
+import { device } from "../../../utils/style/library/size";
 
 
 export const Container = styled.div`

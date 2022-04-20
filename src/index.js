@@ -13,8 +13,8 @@ import ProjectPage from './pages/Project'
 import AboutMePage from './pages/about/my'
 
 //compenents
-import HeaderComponents from './components/Header.jsx'
-import FooterConponents from './components/Footer.jsx'
+import HeaderComponents from './block/header/Header.jsx'
+import FooterConponents from './block/footer/Footer.jsx'
 
 const container = document.getElementById('root')
 const Root = createRoot(container)

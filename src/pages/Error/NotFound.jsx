@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import{
     Teapot
-} from '../../utils/style/page/error/style'
+} from './style'
 
 import TeapotLogo from '../../utils/img/other/teapot.svg'
 

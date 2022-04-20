@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "./color";
+import colors from "../../../utils/style/library/color";
 
 // ? CONFIG STYLE FORM
 const FormFocusColor = colors.secondary;

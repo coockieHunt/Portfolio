@@ -1,4 +1,4 @@
-import * as Home from '../../utils/style/page/home/style'
+import * as Home from './style'
 
 import NodeLogo from '../../utils/img/logo/Node.js_light.svg'
 

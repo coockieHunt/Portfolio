@@ -1,4 +1,11 @@
-import { MdOutlineDangerous, MdInfoOutline, MdOutlineWarningAmber, MdOutlineVerifiedUser } from 'react-icons/md';
+import { 
+    MdOutlineDangerous, 
+    MdInfoOutline, 
+    MdOutlineWarningAmber, 
+    MdOutlineVerifiedUser 
+} from 'react-icons/md';
+
+import colors from './utils/style/library/color';
 
 export const ENVI = {
     DIR : " /opt/portfolio/src/"
@@ -28,5 +35,28 @@ export const ALERT = {
         'backgroundColor' : 'rgb(25, 18, 7)',
         'IconColor' : 'rgb(255, 167, 38)',
         'TextColor' : 'rgb(255, 226, 183)'
+    }
+}
+
+export const BUTTON={
+    "type" : [
+        'button',
+        'submit'
+    ],
+    "defultTheme" : "primary",
+    "theme" : {
+        "primary" : {
+            "backgroundColor" : colors.primary,
+            "gradiant": "",
+            "HoverColor": colors.secondary,
+            "borderRadius": "3px"
+        },
+
+        "secondary" : {
+            "backgroundColor" : colors.secondary,
+            "gradiant": "",
+            "HoverColor": colors.primary,
+            "borderRadius": "3px"
+        }
     }
 }

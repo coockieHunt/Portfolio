@@ -4,7 +4,7 @@ import {
     FormTextArea,
     FormElement,
     FormLabel
-} from '../utils/style/library/form';
+} from './style';
 
 /**
  * * Compenent For add input text

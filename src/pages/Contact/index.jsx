@@ -1,19 +1,24 @@
 import React from 'react';
 
-import * as Contact from "../../utils/style/page/contact/style"
+import * as Contact from "./style"
 
 import {
     FormGroupe,
     FormInline,
-}from "../../utils/style/library/form"
+}from "../../components/form/style"
 
 import {
     FormInputText,
     FormInputEmail,
     FormInputTextArea
-} from "../../components/Form"
+} from "../../components/form/Form"
 
-import ButtonConponents from "../../components/button.jsx"
+
+import { 
+    IoMdSend, 
+} from 'react-icons/io';
+
+import ButtonConponents from "../../components/button/button"
 
 
 class ContactPage extends React.Component {
@@ -94,9 +99,13 @@ class ContactPage extends React.Component {
                             placeHolder="Votre message ..."
                             required
                         />
-                        <FormInline>
-                            <ButtonConponents disabled={false} type="submit"  onClick={this.handleSubmit}>envoyer</ButtonConponents>
-                        </FormInline>
+                        <ButtonConponents 
+                            disabled={false} 
+                            type="submit"
+                            icon= {<IoMdSend/>}
+                            onClick={this.handleSubmit}>
+                        envoyer
+                        </ButtonConponents>
                     </FormGroupe>
                 </Contact.Form>
             </Contact.Container>

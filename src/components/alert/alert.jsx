@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertCompement } from '../utils/style/components/alert';
+import { AlertCompement } from './style'
 import { ALERT } from "../config"
 
 export class Alert extends React.Component{

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../library/color";
+import colors from "../../../utils/style/library/color";
 
 
 export const Teapot = styled.img `

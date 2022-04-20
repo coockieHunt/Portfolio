@@ -1,6 +1,6 @@
-import * as Header from "../utils/style/components/header"
+import * as Header from "./style"
 
-import MainLogo from '../utils/img/logo/logo.svg'
+import MainLogo from '../../utils/img/logo/logo.svg'
 
 function HeaderComponents(){
     return(
