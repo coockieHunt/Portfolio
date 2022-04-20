@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
     FormInput,
     FormTextArea,
@@ -6,8 +7,47 @@ import {
     FormLabel
 } from './style';
 
+import {
+    FormGroupe,
+    FormInline,
+}from "./style/utils"
+
 /**
- * * Compenent For add input text
+ * * Parent Form
+ * 
+ * @param children child form all input
+ */
+export class Groupe extends React.Component{
+    render() {
+        const {children} = this.props;
+        
+        return(
+            <FormGroupe>
+                {children}
+            </FormGroupe>
+        )
+    }
+}
+
+/**
+ * * Inline style form
+ * 
+ * @param children form element inline
+ */
+export class Inline extends React.Component{
+    render() {
+        const {children} = this.props;
+        
+        return(
+            <FormInline>
+                {children}
+            </FormInline>
+        )
+    }
+}
+
+/**
+ * * Add input text
  * 
  * ? if label not define the label will not be added
  * 
@@ -16,7 +56,7 @@ import {
  * @param onChange Callback onChange function
  * @param label Dysplayer text on label
  */
-export class FormInputText extends React.Component{
+export class InputText extends React.Component{
     
     constructor(props){
         super(props)
@@ -52,7 +92,7 @@ export class FormInputText extends React.Component{
 }
 
 /**
- * * Compenent For add input email
+ * * Add input email
  * 
  * ? if label not define the label will not be added
  * 
@@ -61,7 +101,7 @@ export class FormInputText extends React.Component{
  * @param onChange Callback onChange function
  * @param label Dysplayer text on label
  */
- export class FormInputEmail extends React.Component{
+ export class InputEmail extends React.Component{
     
     constructor(props){
         super(props)
@@ -97,7 +137,7 @@ export class FormInputText extends React.Component{
 }
 
 /**
- * * Compenent For add text area
+ * * Add text area
  * 
  * ? if label not define the label will not be added
  * 
@@ -106,7 +146,7 @@ export class FormInputText extends React.Component{
  * @param onChange Callback onChange function
  * @param label Dysplaye text on text arta
  */
- export class FormInputTextArea extends React.Component{
+ export class InputTextArea extends React.Component{
     
     constructor(props){
         super(props)

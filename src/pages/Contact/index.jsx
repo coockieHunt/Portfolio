@@ -1,24 +1,13 @@
 import React from 'react';
 
 import * as Contact from "./style"
-
-import {
-    FormGroupe,
-    FormInline,
-}from "../../components/form/style"
-
-import {
-    FormInputText,
-    FormInputEmail,
-    FormInputTextArea
-} from "../../components/form/Form"
-
+import * as FormComponent from "../../components/form/Form"
 
 import { 
     IoMdSend, 
 } from 'react-icons/io';
 
-import ButtonConponents from "../../components/button/button"
+import ButtonConponent from "../../components/button/button"
 
 
 class ContactPage extends React.Component {
@@ -63,9 +52,9 @@ class ContactPage extends React.Component {
                 </Contact.Side>
                 <Contact.Form>
                     <h1>Contact US</h1>
-                    <FormGroupe onSubmit={this.handleSubmit}>
-                        <FormInline>
-                            <FormInputText 
+                    <FormComponent.Groupe onSubmit={this.handleSubmit}>
+                        <FormComponent.Inline>
+                            <FormComponent.InputText 
                                 name="firsName"
                                 value={this.state.firsName} 
                                 onChange={this.handleChange}
@@ -73,16 +62,16 @@ class ContactPage extends React.Component {
                                 placeHolder="jhon"
                                 required
                             /> 
-                            <FormInputText 
+                            <FormComponent.InputText 
                                 name="lastname" 
                                 value={this.state.lastname} 
                                 onChange={this.handleChange}
                                 label="nom"
                                 placeHolder="doe"
                             /> 
-                        </FormInline>
+                        </FormComponent.Inline>
                        
-                        <FormInputEmail 
+                        <FormComponent.InputEmail 
                             name="email" 
                             value={this.state.email} 
                             onChange={this.handleChange}
@@ -91,7 +80,7 @@ class ContactPage extends React.Component {
                             required
                         />
 
-                        <FormInputTextArea 
+                        <FormComponent.InputTextArea 
                             name="message"
                             value={this.state.message} 
                             onChange={this.handleChange}
@@ -99,14 +88,14 @@ class ContactPage extends React.Component {
                             placeHolder="Votre message ..."
                             required
                         />
-                        <ButtonConponents 
+                        <ButtonConponent 
                             disabled={false} 
                             type="submit"
                             icon= {<IoMdSend/>}
                             onClick={this.handleSubmit}>
                         envoyer
-                        </ButtonConponents>
-                    </FormGroupe>
+                        </ButtonConponent>
+                    </FormComponent.Groupe>
                 </Contact.Form>
             </Contact.Container>
         )
