@@ -7,7 +7,7 @@ import { device } from "../../../utils/style/library/size";
 export const Container = styled.div `
     display: flex;
     weight: 50%;
-    margin: auto;
+    margin:  0 auto 0 auto;
     box-shadow: ${shadow.fence};
 
     @media ${device.laptop} { 

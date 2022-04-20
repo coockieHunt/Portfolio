@@ -2,6 +2,7 @@ import React from 'react';
 
 import * as Contact from "./style"
 import * as FormComponent from "../../components/form/Form"
+import * as TextComponent from "../../components/text/Text"
 
 import { 
     IoMdSend, 
@@ -40,64 +41,67 @@ class ContactPage extends React.Component {
 
     render() {
         return(
-            <Contact.Container>
-                <Contact.Side>
-                    <Contact.Title>Formulaire de contact</Contact.Title>
-                    <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
-                    <Contact.Other>
-                        <Contact.OtherOption>+33 603420204</Contact.OtherOption>
-                        <Contact.OtherOption>pro.jonathan.gleyze@gmail.com</Contact.OtherOption>
-                    </Contact.Other>
-                    <p>Lorem ipsum, mais truc en ski</p>
-                </Contact.Side>
-                <Contact.Form>
-                    <h1>Contact US</h1>
-                    <FormComponent.Groupe onSubmit={this.handleSubmit}>
-                        <FormComponent.Inline>
-                            <FormComponent.InputText 
-                                name="firsName"
-                                value={this.state.firsName} 
-                                onChange={this.handleChange}
-                                label="Prenon"
-                                placeHolder="jhon"
-                                required
-                            /> 
-                            <FormComponent.InputText 
-                                name="lastname" 
-                                value={this.state.lastname} 
-                                onChange={this.handleChange}
-                                label="nom"
-                                placeHolder="doe"
-                            /> 
-                        </FormComponent.Inline>
-                       
-                        <FormComponent.InputEmail 
-                            name="email" 
-                            value={this.state.email} 
-                            onChange={this.handleChange}
-                            placeHolder="secteur@domaine.fr"
-                            label= "email"
-                            required
-                        />
+            <React.Fragment>
+                <TextComponent.H1>Vous voulez me contacter, ces par ici.</TextComponent.H1>
 
-                        <FormComponent.InputTextArea 
-                            name="message"
-                            value={this.state.message} 
-                            onChange={this.handleChange}
-                            label= "message"
-                            placeHolder="Votre message ..."
-                            required
-                        />
-                        <ButtonConponent 
-                            disabled={false} 
-                            type="submit"
-                            icon= {<IoMdSend/>}
-                            onClick={this.handleSubmit}>
-                        envoyer
-                        </ButtonConponent>
-                    </FormComponent.Groupe>
-                </Contact.Form>
-            </Contact.Container>
+                <Contact.Container>
+                    <Contact.Side>
+                        <Contact.Title>Formulaire de contact</Contact.Title>
+                        <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
+                        <Contact.Other>
+                            <Contact.OtherOption>+33 603420204</Contact.OtherOption>
+                            <Contact.OtherOption>pro.jonathan.gleyze@gmail.com</Contact.OtherOption>
+                        </Contact.Other>
+                        <p>Lorem ipsum, mais truc en ski</p>
+                    </Contact.Side>
+                    <Contact.Form>
+                        <FormComponent.Groupe onSubmit={this.handleSubmit}>
+                            <FormComponent.Inline>
+                                <FormComponent.InputText 
+                                    name="firsName"
+                                    value={this.state.firsName} 
+                                    onChange={this.handleChange}
+                                    label="Prenon"
+                                    placeHolder="jhon"
+                                    required
+                                /> 
+                                <FormComponent.InputText 
+                                    name="lastname" 
+                                    value={this.state.lastname} 
+                                    onChange={this.handleChange}
+                                    label="nom"
+                                    placeHolder="doe"
+                                /> 
+                            </FormComponent.Inline>
+                        
+                            <FormComponent.InputEmail 
+                                name="email" 
+                                value={this.state.email} 
+                                onChange={this.handleChange}
+                                placeHolder="secteur@domaine.fr"
+                                label= "email"
+                                required
+                            />
+
+                            <FormComponent.InputTextArea 
+                                name="message"
+                                value={this.state.message} 
+                                onChange={this.handleChange}
+                                label= "message"
+                                placeHolder="Votre message ..."
+                                required
+                            />
+                            <ButtonConponent 
+                                disabled={false} 
+                                type="submit"
+                                icon= {<IoMdSend/>}
+                                onClick={this.handleSubmit}>
+                            envoyer
+                            </ButtonConponent>
+                        </FormComponent.Groupe>
+                    </Contact.Form>
+                </Contact.Container>
+            </React.Fragment>
         )
     }
 }
