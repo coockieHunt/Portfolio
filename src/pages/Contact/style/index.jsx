@@ -7,14 +7,13 @@ import { device } from "../../../utils/style/library/size";
 export const Container = styled.div `
     display: flex;
     weight: 50%;
-    width : 80%;
     margin: auto;
+    box-shadow: ${shadow.fence};
 
     @media ${device.laptop} { 
         width : 90%;
         margin: auto;
     }
-    box-shadow: ${shadow.fence};
 `;
 
 export const Form =  styled.div`
