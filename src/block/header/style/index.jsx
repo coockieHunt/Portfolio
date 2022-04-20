@@ -23,8 +23,7 @@ export const Title = styled.div`
 `;
 
 export const Logo = styled.img `
-    filter: ${colors.primary_filter};
-    height: 15px;
+    height: 30px;
 `;
 
 
