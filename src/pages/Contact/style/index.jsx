@@ -66,15 +66,19 @@ export const BaseLine= styled.p`
 
 export const Other= styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
+    flex-direction: column;
+    gap: 80px;
     flex-grow: 4;
+
+    margin-top: 30%;
+
 `;
 
 export const OtherOption= styled.div`
     display: flex;
     color: ${colors.white};
+    background-color:${colors.secondary};
+    padding: 10px;
     & svg{
         font-size: 50px;
         color: ${colors.secondary};
