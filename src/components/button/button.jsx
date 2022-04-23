@@ -46,7 +46,6 @@ export class CTA extends React.Component{
 
 export function Link(props) {
     let To = props.to
-    const location = useLocation();
     const navigate = useNavigate();
     const handleOnClick = () => 
         navigate(To, {replace: false});
