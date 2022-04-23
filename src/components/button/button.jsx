@@ -1,8 +1,10 @@
 import React from 'react';
-import {Button} from './style'
+import {Button, Cp} from './style'
 import { BUTTON } from "../../config"
+import { HiOutlineClipboardCopy } from 'react-icons/hi';
 
-class ButtonConponents extends React.Component{
+
+export class CTA extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -42,5 +44,35 @@ class ButtonConponents extends React.Component{
     }
 }
 
+export class CP extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            disabled: false
+        };
 
-export default ButtonConponents
+        this.HandelOnClick = this.HandelOnClick.bind(this);
+    }
+    
+
+    HandelOnClick(func){
+        if(this.props.disabled){return null}
+
+
+        let text  = this.props.children
+        if ('clipboard' in navigator) {
+            return navigator.clipboard.writeText(text);
+          } else {
+            return document.execCommand('copy', true, text);
+          }
+    }
+
+    render(){
+        const {children, disabled} = this.props;
+
+        return(
+            <Cp>{children} <span disabled={disabled} onClick={this.HandelOnClick}><HiOutlineClipboardCopy/></span></Cp>
+        )
+    }
+}
+

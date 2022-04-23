@@ -74,17 +74,4 @@ export const Other= styled.div`
 
 `;
 
-export const OtherOption= styled.div`
-    display: flex;
-    color: ${colors.white};
-    background-color:${colors.secondary};
-    padding: 10px;
-    & svg{
-        font-size: 50px;
-        color: ${colors.secondary};
-        vertical-align: middle;
-    }
-`;
-
-
 

@@ -3,12 +3,12 @@ import React from 'react';
 import * as Contact from "./style"
 import * as FormComponent from "../../components/form/Form"
 import * as TextComponent from "../../components/text/Text"
+import * as ButtonConponent from "../../components/button/button"
 
 import { 
     IoMdSend, 
 } from 'react-icons/io';
 
-import ButtonConponent from "../../components/button/button"
 
 
 class ContactPage extends React.Component {
@@ -49,8 +49,8 @@ class ContactPage extends React.Component {
                         <Contact.Title>Formulaire de contact</Contact.Title>
                         <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
                         <Contact.Other>
-                            <Contact.OtherOption>+33 603420204</Contact.OtherOption>
-                            <Contact.OtherOption>pro.jonathan.gleyze@gmail.com</Contact.OtherOption>
+                            <ButtonConponent.CP>+33 603420204</ButtonConponent.CP>
+                            <ButtonConponent.CP>pro.jonathan.gleyze@gmail.com</ButtonConponent.CP>
                         </Contact.Other>
                         <p>Lorem ipsum, mais truc en ski</p>
                     </Contact.Side>
@@ -91,13 +91,13 @@ class ContactPage extends React.Component {
                                 placeHolder="Votre message ..."
                                 required
                             />
-                            <ButtonConponent 
+                            <ButtonConponent.CTA 
                                 disabled={false} 
                                 type="submit"
                                 icon= {<IoMdSend/>}
                                 onClick={this.handleSubmit}>
                             envoyer
-                            </ButtonConponent>
+                            </ButtonConponent.CTA>
                         </FormComponent.Groupe>
                     </Contact.Form>
                 </Contact.Container>

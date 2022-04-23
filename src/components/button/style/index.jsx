@@ -29,3 +29,25 @@ export const Button = styled.button`
     }
 `;
 
+export const Cp= styled.div`
+    ${'' /* display: flex;
+    justify-content: space-between; */}
+
+    color: ${colors.white};
+    background-color:${colors.secondary};
+    line-height: 2.5;
+    padding: 0 0 0 15px;
+    & span{
+        background:#FFF;
+        height :100%;
+        float: right;
+        width: 15%;
+
+        text-align: center;
+
+        background-color : ${colors.spot};
+
+        cursor: pointer;
+    }
+   
+`;
