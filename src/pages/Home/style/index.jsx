@@ -39,16 +39,9 @@ export const PickUpLogo = styled.img `
     }
 `;
 
-export const BackLineSpan = styled.span `
-    background-image: linear-gradient(45deg, ${colors.primary}, ${colors.secondary});
-    color: ${colors.white};
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: inline;
-    padding: 4px;
-    margin-top:100px;
-
-    @media ${device.laptop} { 
-        margin-top:0px;
-    }
+export const Navigate = styled.div `
+    display:flex;
+    justify-content: flex-start;
+    gap: 5%;
+    padding: 10% 0 0 0;
 `

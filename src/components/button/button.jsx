@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useCallback} from 'react';
+import {useNavigate} from 'react-router-dom';
 import {Button, Cp} from './style'
 import { BUTTON } from "../../config"
 import { HiOutlineClipboardCopy } from 'react-icons/hi';
-
 
 export class CTA extends React.Component{
     constructor(props) {
@@ -43,6 +43,24 @@ export class CTA extends React.Component{
         )
     }
 }
+
+export function Link(props) {
+    const To = props.to
+    const navigate = useNavigate();
+    const handleOnClick = () => 
+        navigate(To.toString(), {replace: true});
+
+    let ThemeSet = props.theme
+    if(ThemeSet === undefined){ThemeSet = BUTTON.defultTheme}
+
+    return (
+      <Button type="button" onClick={handleOnClick} theme={ThemeSet} >
+        {props.children}
+      </Button>
+    );
+}
+
+
 
 export class CP extends React.Component{
     constructor(props) {
