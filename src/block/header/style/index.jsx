@@ -11,6 +11,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px 0 20px;
+    user-select: none;
 
     @media ${device.laptop} { 
         flex-direction: column;
