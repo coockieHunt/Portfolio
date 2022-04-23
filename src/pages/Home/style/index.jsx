@@ -44,4 +44,8 @@ export const Navigate = styled.div `
     justify-content: flex-start;
     gap: 5%;
     padding: 10% 0 0 0;
+
+    @media ${device.laptop} { 
+        justify-content: center;
+    }
 `
