@@ -10,7 +10,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 20px 0 20px;
 
     @media ${device.laptop} { 
         flex-direction: column;
