@@ -24,7 +24,7 @@ export class CTA extends React.Component{
         return rslt
     }
 
-    HandelOnClick(func){
+    HandelOnClick({ OnClick }){
         if(this.props.disabled){return null}
     }
 
@@ -37,7 +37,7 @@ export class CTA extends React.Component{
         if(ThemeSet === undefined){ThemeSet = BUTTON.defultTheme}
 
         return(
-            <Button type={type} disabled={disabled} theme={ThemeSet} onClick={this.HandelOnClick(OnClick)}>
+            <Button type={type} disabled={disabled} theme={ThemeSet} onClick={OnClick}>
                 {children} {icon}
             </Button>
         )
