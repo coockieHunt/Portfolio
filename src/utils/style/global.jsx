@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 /*
     ? main constainer
 */
-export const MainContainer = styled.div`
+export const MainContainerStyle = styled.div`
     margin: auto;
     display:flex;
     justify-content: space-between;

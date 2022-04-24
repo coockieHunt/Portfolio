@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 
 //global style
-import {GlobalStyle, MainContainer} from './utils/style/global';
+import {GlobalStyle, MainContainerStyle} from './utils/style/global';
 
 //pages
 import NotFoundPage from './pages/Error/NotFound'
@@ -18,6 +18,25 @@ import FooterConponents from './block/footer/Footer.jsx'
 
 const container = document.getElementById('root')
 const Root = createRoot(container)
+
+export class MainContainer extends React.Component{
+ 
+    componentDidMount() {
+        document.title = "Gleyze jonathan"
+    }
+    
+    render() {
+
+
+        const {children} = this.props;
+
+        return(
+            <MainContainerStyle>
+                {children} 
+            </MainContainerStyle>
+        )
+    }
+}
 
 
 Root.render(
