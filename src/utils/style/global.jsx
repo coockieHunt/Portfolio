@@ -13,8 +13,13 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
-    .react-icons-middel {
+    
+    .middel {
         vertical-align: middle;
+    }
+
+    .NoMargin{
+        margin: 0;
     }
 `
 /*

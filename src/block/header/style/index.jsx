@@ -21,6 +21,12 @@ export const Container = styled.div`
 
 export const Title = styled.div`
     color: ${colors.primary};
+
+    @media ${device.laptop} { 
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
 `;
 
 export const Logo = styled.img `

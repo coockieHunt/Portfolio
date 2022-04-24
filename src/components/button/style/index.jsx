@@ -27,6 +27,8 @@ export const Button = styled.button`
         
         background-color: ${props => BUTTON.theme[props.theme].HoverColor}; ;
     }
+
+    &
 `;
 
 export const Cp= styled.div`

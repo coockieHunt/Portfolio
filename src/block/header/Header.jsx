@@ -23,7 +23,7 @@ function HeaderComponents(){
     
         window.addEventListener('resize', changeWidth)
     
-      }, [])
+    }, [])
 
 
     return(
@@ -34,13 +34,15 @@ function HeaderComponents(){
                     alt="Node Js logo" 
                     to='/'
                     />
-            </Header.Title>
+
             {(screenWidth < 1024) && (
                 <div>
-                    <ButtonComponent.CTA OnClick={toggleNav} className="btn" type='button'>show/hide</ButtonComponent.CTA>
+                    <ButtonComponent.CTA OnClick={toggleNav} className="NoMargin" type='button'>show/hide</ButtonComponent.CTA>
                 </div>
 
             )}
+            </Header.Title>
+
             {(toggleMenu || screenWidth > 1024) && (
                 <Header.Nav>
                     <Header.NavElement>
