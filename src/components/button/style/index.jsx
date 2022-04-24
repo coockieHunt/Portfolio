@@ -27,16 +27,11 @@ export const Button = styled.button`
         
         background-color: ${props => BUTTON.theme[props.theme].HoverColor}; ;
     }
-
-    &
 `;
 
 export const Cp= styled.div`
-    ${'' /* display: flex;
-    justify-content: space-between; */}
-
-    color: ${colors.white};
-    background-color:${colors.secondary};
+    color: ${colors.grey};
+    background-color: white;
     line-height: 2.5;
     padding: 0 0 0 15px;
     & span{
@@ -44,12 +39,15 @@ export const Cp= styled.div`
         height :100%;
         float: right;
         width: 15%;
+        color: white;
 
         text-align: center;
 
         background-color : ${colors.spot};
 
         cursor: pointer;
+
+        &:hover{
+        background-color: ${colors.secondary} ;
     }
-   
 `;
