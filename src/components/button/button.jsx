@@ -1,5 +1,5 @@
-import React, {useCallback} from 'react';
-import {useNavigate, useLocation } from 'react-router-dom';
+import React from 'react';
+import {useNavigate } from 'react-router-dom';
 import {Button, Cp} from './style'
 import { BUTTON } from "../../config"
 import { HiOutlineClipboardCopy } from 'react-icons/hi';
