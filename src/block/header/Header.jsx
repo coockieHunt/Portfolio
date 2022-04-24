@@ -1,4 +1,5 @@
 import * as Header from "./style"
+import * as NavComponent from "../../components/link/Link"
 
 import MainLogo from '../../utils/img/logo/logo.svg'
 
@@ -6,37 +7,41 @@ function HeaderComponents(){
     return(
         <Header.Container>
             <Header.Title>
-                <Header.Logo src={MainLogo} alt="Node Js logo" />
+                <NavComponent.Img 
+                    src={MainLogo} 
+                    alt="Node Js logo" 
+                    to='/'
+                    />
             </Header.Title>
             <Header.Nav>
                 <Header.NavElement>
-                    <Header.StyledLink 
+                    <NavComponent.NavLink 
                         to='/'
                     >
                     Accueil
-                    </Header.StyledLink>
+                    </NavComponent.NavLink>
                 </Header.NavElement>
                 <Header.NavElement>
-                    <Header.StyledLink 
+                    <NavComponent.NavLink 
                         to='/contact'
                     >
                     Contact
-                    </Header.StyledLink>
+                    </NavComponent.NavLink>
                 </Header.NavElement>
                 <Header.NavElement>
-                    <Header.StyledLink 
+                    <NavComponent.NavLink 
                         to='/project'
                     >
                     Mes Porject
-                    </Header.StyledLink>
+                    </NavComponent.NavLink>
                 </Header.NavElement>
                 <Header.NavElement>
-                    <Header.StyledLink 
-                        className={"accentuated"}
+                    <NavComponent.NavLink 
+                        accentuated
                         to='/about/me'
                     >
                     A props de moi
-                    </Header.StyledLink>
+                    </NavComponent.NavLink>
                 </Header.NavElement>
             </Header.Nav>
         </Header.Container>
