@@ -59,7 +59,11 @@ export const Nav = styled.ul`
 
 
     @media ${device.laptop} { 
-        border-top: 1px solid ${colors.grey};;
+        width: 60%;
+        border-top: 1px solid ${colors.grey};
+        border-bottom: 1px solid ${colors.grey};
+        margin: 20px 0 0 0;
+        padding: 0 0 20px 0;
         flex-direction: column;
         text-align: center;
     }
