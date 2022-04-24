@@ -56,6 +56,9 @@ export const StyledLink = styled(NavLink)`
 
 export const Nav = styled.ul`
     display: flex;
+
+    border-top: 1px solid ${colors.grey};;
+
     @media ${device.laptop} { 
         flex-direction: column;
         text-align: center;

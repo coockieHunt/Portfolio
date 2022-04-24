@@ -31,7 +31,7 @@ function HeaderComponents(){
             <Header.Title>
                 <NavComponent.Img 
                     src={MainLogo} 
-                    alt="Node Js logo" 
+                    alt="Logo personal" 
                     to='/'
                     />
 
