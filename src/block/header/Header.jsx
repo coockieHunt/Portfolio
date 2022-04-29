@@ -6,6 +6,12 @@ import * as ButtonComponent from '../../components/button/button';
 
 import MainLogo from '../../utils/img/logo/logo.svg'
 
+import { 
+    IoInformationCircleSharp, 
+    IoLibrarySharp,
+    IoMailSharp
+} from 'react-icons/io5';
+
 function HeaderComponents(){
     const [toggleMenu, setToggleMenu] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -18,7 +24,6 @@ function HeaderComponents(){
 
         const changeWidth = () => {
           setScreenWidth(window.innerWidth);
-          console.log(window.innerWidth)
         }
     
         window.addEventListener('resize', changeWidth)
@@ -33,11 +38,11 @@ function HeaderComponents(){
                     src={MainLogo} 
                     alt="Logo personal" 
                     to='/'
-                    />
+                />
 
             {(screenWidth < 1024) && (
                 <div>
-                    <ButtonComponent.CTA OnClick={toggleNav} className="NoMargin" type='button'>show/hide</ButtonComponent.CTA>
+                    <ButtonComponent.CTA OnClick={toggleNav} className="NoMargin" type='button'>{toggleMenu ? "hide" : "show"}</ButtonComponent.CTA>
                 </div>
 
             )}
@@ -45,35 +50,42 @@ function HeaderComponents(){
 
             {(toggleMenu || screenWidth > 1024) && (
                 <Header.Nav>
-                    <Header.NavElement>
-                        <NavComponent.NavLink 
-                            to='/'
-                        >
-                        Accueil
-                        </NavComponent.NavLink>
-                    </Header.NavElement>
-                    <Header.NavElement>
-                        <NavComponent.NavLink 
-                            to='/contact'
-                        >
-                        Contact
-                        </NavComponent.NavLink>
-                    </Header.NavElement>
-                    <Header.NavElement>
-                        <NavComponent.NavLink 
-                            to='/project'
-                        >
-                        Mes Porject
-                        </NavComponent.NavLink>
-                    </Header.NavElement>
-                    <Header.NavElement>
-                        <NavComponent.NavLink 
-                            accentuated
-                            to='/about/me'
-                        >
-                        A props de moi
-                        </NavComponent.NavLink>
-                    </Header.NavElement>
+                    <Header.NavLeft>
+                        <Header.NavElement>
+                            <NavComponent.NavLink 
+                                to='contact'
+                            >
+                            <IoMailSharp/> Contact
+                            </NavComponent.NavLink>
+                        </Header.NavElement>
+
+                        <Header.NavElement>
+                            <NavComponent.NavLink 
+                                to='/project'
+                            >
+                            <IoLibrarySharp/>Projet
+                            </NavComponent.NavLink>
+                        </Header.NavElement>
+
+                        <Header.NavElement>
+                            <NavComponent.NavLink 
+                                to='/about/me'
+                            >
+                            <IoInformationCircleSharp/> A propos
+                            </NavComponent.NavLink>
+                        </Header.NavElement>
+                    </Header.NavLeft>
+                    <Header.NavRight>
+                        <Header.NavElement>
+                            <NavComponent.NavLink 
+                                accentuated
+                                to='https://github.com/coockieHunt/portfolio'
+                            >
+                            Lient git
+                            </NavComponent.NavLink>
+                        </Header.NavElement>
+                    </Header.NavRight>
+                   
                 </Header.Nav>
             )}
 
