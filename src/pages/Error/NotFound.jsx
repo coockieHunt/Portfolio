@@ -15,10 +15,10 @@ const Error = styled.div`
 
 function NotFoundPage(){
     return(
-        <div>
-     <Teapot src={TeapotLogo} alt="Node Js logo" />
+        <div style={{'height': '90%'}}>
+            <Teapot src={TeapotLogo} alt="Node Js logo" />
         
-        <Error>server : Ooops 404 not found<br/><br/>me :can you excuse me ? 😟<br/> you: YES 💚 <br/> me : Thank you I swear it won't happen again !! 😊😎</Error>
+            <Error>server : Ooops 404 not found<br/><br/>me :can you excuse me ? 😟<br/> you: YES 💚 <br/> me : Thank you I swear it won't happen again !! 😊😎</Error>
         </div>
    
     )
