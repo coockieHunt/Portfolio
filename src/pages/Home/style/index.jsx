@@ -17,16 +17,43 @@ export const Container = styled.div`
 `;
 
 export const PickUp  = styled.div`
-    color: ${colors.primary};
-    font-size: 2em;
-    text-align: center;
-    user-select: none;
+    width: 50%;
+
+    @media ${device.laptop} { 
+        width: 70%;
+    }
 `;
+
+export const PickUpText  = styled.div`
+    & h1{
+        text-align: left;
+        font-size: 2em;
+        @media ${device.laptop} { 
+            text-align: center;
+        }
+    }
+
+    & p{
+        text-align: left;
+        font-size: 20px;
+        width: 75%;
+
+        font-size: 100;
+        font-weight: 400;
+
+        @media ${device.laptop} { 
+            text-align: center;
+            width: 100%;
+        }
+    }
+`;
+
 
 export const PickUpSide  = styled.div`
     font-size: 10em;
     text-align: center;
     user-select:none;
+
 `;
 
 export const PickUpLogo = styled.img `
@@ -39,11 +66,12 @@ export const PickUpLogo = styled.img `
     }
 `;
 
+
 export const Navigate = styled.div `
     display:flex;
     justify-content: flex-start;
     gap: 5%;
-    padding: 10% 0 0 0;
+    padding: 30px 0 0 0;
 
     @media ${device.laptop} { 
         justify-content: center;

@@ -1,12 +1,22 @@
 import { createGlobalStyle } from 'styled-components'
 import styled from "styled-components";
 
+import Roboto from '../font/roboto/Roboto-Regular.ttf';
+
 export const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'Roboto';
+        src: url(${Roboto}) format('Roboto'),
+        font-weight: 300;
+        font-style: normal;
+    }
+
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-family: 'Roboto', Helvetica, sans-serif;
+
     }
 
     ul, li{
