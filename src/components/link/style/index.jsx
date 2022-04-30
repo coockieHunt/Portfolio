@@ -7,8 +7,9 @@ import colors from "../../../utils/style/library/color";
 
 export const Link = styled(NavLink)`
     text-decoration: none;
-    
     color: ${colors.grey};
+    
+    transition: color .4s ease-out;
 
     & svg{
         height: 100%;

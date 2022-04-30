@@ -9,7 +9,8 @@ import MainLogo from '../../utils/img/logo/logo.svg'
 import { 
     IoInformationCircleSharp, 
     IoLibrarySharp,
-    IoMailSharp
+    IoMailSharp,
+    IoLogoGithub
 } from 'react-icons/io5';
 
 function HeaderComponents(){
@@ -81,7 +82,7 @@ function HeaderComponents(){
                                 accentuated
                                 to='https://github.com/coockieHunt/portfolio'
                             >
-                            Lient git
+                            <IoLogoGithub/>Lient git
                             </NavComponent.NavLink>
                         </Header.NavElement>
                     </Header.NavRight>
