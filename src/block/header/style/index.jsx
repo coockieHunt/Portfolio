@@ -7,10 +7,9 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    padding: 20px 10px 0px 10px;
+    padding: 20px 20px 0px 20px;
     user-select: none;
-    width: 95%;
-    margin: auto;
+    width: 100%;
     font-size: 1em;
 
     @media ${device.laptop} { 
