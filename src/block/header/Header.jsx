@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
-
+import {
+    Link
+} from 'react-router-dom';
 import * as Header from "./style"
 import * as NavComponent from "../../components/link/Link"
 import * as ButtonComponent from '../../components/button/button';
@@ -35,7 +37,7 @@ function HeaderComponents(){
     return(
         <Header.Container>
             <Header.Title>
-                <NavComponent.Img 
+                <NavComponent.NavImg 
                     src={MainLogo} 
                     alt="Logo personal" 
                     to='/'
@@ -80,6 +82,7 @@ function HeaderComponents(){
                         <Header.NavElement>
                             <NavComponent.NavLink 
                                 accentuated
+                                external
                                 to='https://github.com/coockieHunt/portfolio'
                                 dysplay= 'Lient git'
                                 icon={<IoLogoGithub/>}

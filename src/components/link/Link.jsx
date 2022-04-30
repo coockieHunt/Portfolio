@@ -4,39 +4,58 @@ import * as Nav from './style';
 
 
 /**
- * * Create link
+ * * Create nav link
  * 
  * @param to go to uri or external link
  * @param accentuated add style outline boxes link 
  * @param children text dysplay
  */
  export class NavLink extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {to: null};
+    }
+
+
+
+    
     render() {
-        const {to, accentuated, dysplay, icon} = this.props;
+        const {to, accentuated, dysplay, icon, external} = this.props;
 
         let className;
         if(accentuated){className = 'accentuated'}
-        
-        return(
-            <Nav.Link
-                to={to}
+        if(external){
+            return(
+                <Nav.ExternalLink
+                href={to}
                 className = {className}
-            >
-                {icon} <span>{dysplay}</span>
-            </Nav.Link>
-        )
+                >
+                    {icon} <span>{dysplay}</span> 
+                </Nav.ExternalLink>
+            )
+         
+        }else{
+            return(
+                <Nav.InterLink
+                    to={to}
+                    className = {className}
+                >
+                    {icon} <span>{dysplay}</span> 
+                </Nav.InterLink>
+            )
+        }
+     
     }
 }
 
-
 /**
- * * Create link img
+ * * Create nav link img
  * 
  * @param src uri on image or svg
  * @param alt description of image
  * @param to url on click 
  */
-export function Img(props) {
+export function NavImg(props) {
     let To = props.to
 
     const navigate = useNavigate();
