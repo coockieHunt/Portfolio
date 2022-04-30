@@ -17,7 +17,7 @@ export const Container = styled.div`
 `;
 
 export const PickUp  = styled.div`
-    width: 50%;
+    width: 40%;
 
     @media ${device.laptop} { 
         width: 70%;

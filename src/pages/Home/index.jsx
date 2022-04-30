@@ -9,9 +9,9 @@ function HomePage(){
             <Home.PickUp>
                 <Home.PickUpText>
                     <TextComponent.H1> 
-                        {'développeur full stack '.toUpperCase()}<TextComponent.BackLine>NODE JS</TextComponent.BackLine>
+                        {'développeur full stack '.toUpperCase()}<br/><TextComponent.BackLine>NODE JS</TextComponent.BackLine>
                     </TextComponent.H1> 
-                    <p>Passionné par l’informatique, expérience de développeur operateur de 4 ans.plus projet annexe comme une seedbox ou encore des frameworks de jeux</p>
+                    <p>Passionné par l’informatique, expérience de développeur operateur de 4 ans</p>
                 </Home.PickUpText>
                 <Home.Navigate>
                     <ButtonConponent.Link 

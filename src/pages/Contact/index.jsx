@@ -2,11 +2,12 @@ import React from 'react';
 
 import * as Contact from "./style"
 import * as FormComponent from "../../components/form/Form"
-import * as TextComponent from "../../components/text/Text"
 import * as ButtonConponent from "../../components/button/button"
 
 import { 
     IoMdSend, 
+    IoIosCall,
+    IoIosMail
 } from 'react-icons/io';
 
 
@@ -42,15 +43,21 @@ class ContactPage extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <TextComponent.H1>Vous voulez me contacter, ces par ici.</TextComponent.H1>
-
                 <Contact.Container>
                     <Contact.Side>
-                        <Contact.Title>Formulaire de contact</Contact.Title>
+                        <Contact.Title>Information de Contact</Contact.Title>
                         <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
                         <Contact.Other>
-                            <ButtonConponent.CP>+33 603420204</ButtonConponent.CP>
-                            <ButtonConponent.CP>pro.jonathan.gleyze@gmail.com</ButtonConponent.CP>
+                            <Contact.Option>
+                                <IoIosCall/> 
+                                <span>+33 603420204</span>
+                            </Contact.Option>
+                            <Contact.Option>
+                                <IoIosMail/> 
+                                <span>pro.jonathan.gleyze@gmail.com</span> 
+                            </Contact.Option>
+                            
+
                         </Contact.Other>
                         <p>Lorem ipsum, mais truc en ski</p>
                     </Contact.Side>

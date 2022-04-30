@@ -6,9 +6,9 @@ import { device } from "../../../utils/style/library/size";
 
 export const Container = styled.div `
     display: flex;
-    weight: 50%;
     margin:  0 auto 0 auto;
     box-shadow: ${shadow.fence};
+    border-radius: 2%;
 
     @media ${device.laptop} { 
         width : 90%;
@@ -41,14 +41,15 @@ export const Side= styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
+    padding: 25px;
+    margin: 8px;
+    border-radius: 2%;
     width: 700px;
 
     background-color: ${colors.primary};
-    color: ${colors.white};
     box-shadow: ${shadow.fence};
+
+    color: ${colors.white};
    
     @media ${device.laptop} { 
         display: none;
@@ -62,16 +63,36 @@ export const Title= styled.h1`
 
 export const BaseLine= styled.p`
     font-size: 1em;
+    font-weight: lighter;
 `;
 
 export const Other= styled.div`
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 20px;
     flex-grow: 4;
 
     margin-top: 30%;
 
 `;
+
+export const Option = styled.div`
+    & span{
+        line-height: 50px; 
+        vertical-align: middle;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    & svg{
+        background-color: ${colors.secondary};
+
+        height: 50px;
+        width: 50px;
+        padding: 15px;
+        float: left;
+        border-radius: 50%;
+    }
+`
 
 
