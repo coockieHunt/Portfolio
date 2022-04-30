@@ -81,7 +81,7 @@ export const Option = styled.div`
         line-height: 50px; 
         vertical-align: middle;
         text-align: left;
-        padding-left: 10px;
+        padding-left: 20px;
     }
 
     & svg{

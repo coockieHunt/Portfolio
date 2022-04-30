@@ -55,25 +55,25 @@ function HeaderComponents(){
                         <Header.NavElement>
                             <NavComponent.NavLink 
                                 to='contact'
-                            >
-                            <IoMailSharp/> Contact
-                            </NavComponent.NavLink>
+                                dysplay=  'Contact'
+                                icon = {<IoMailSharp/>}
+                            />
                         </Header.NavElement>
 
                         <Header.NavElement>
                             <NavComponent.NavLink 
                                 to='/project'
-                            >
-                            <IoLibrarySharp/>Projet
-                            </NavComponent.NavLink>
+                                dysplay=  'Projet'
+                                icon = {<IoLibrarySharp/>}
+                            />
                         </Header.NavElement>
 
                         <Header.NavElement>
                             <NavComponent.NavLink 
                                 to='/about/me'
-                            >
-                            <IoInformationCircleSharp/> A propos
-                            </NavComponent.NavLink>
+                                dysplay=  'A propos'
+                                icon = {<IoInformationCircleSharp/>}
+                            />
                         </Header.NavElement>
                     </Header.NavLeft>
                     <Header.NavRight>
@@ -81,9 +81,9 @@ function HeaderComponents(){
                             <NavComponent.NavLink 
                                 accentuated
                                 to='https://github.com/coockieHunt/portfolio'
-                            >
-                            <IoLogoGithub/>Lient git
-                            </NavComponent.NavLink>
+                                dysplay= 'Lient git'
+                                icon={<IoLogoGithub/>}
+                            />
                         </Header.NavElement>
                     </Header.NavRight>
                    

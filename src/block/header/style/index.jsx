@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    padding: 20px 20px 0px 20px;
+    padding: 10px 20px 0px 20px;
     user-select: none;
     width: 100%;
     font-size: 1em;

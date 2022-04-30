@@ -8,13 +8,16 @@ import colors from "../../../utils/style/library/color";
 export const Link = styled(NavLink)`
     text-decoration: none;
     color: ${colors.grey};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     
     transition: color .4s ease-out;
 
     & svg{
-        height: 100%;
-        float: left;
-        margin: 0 3px 0 0;
+        margin-right: 5px;
     }
 
     &.active {
@@ -23,10 +26,10 @@ export const Link = styled(NavLink)`
     }
 
     &.accentuated{
-        box-shadow: inset 0px 0px 0px 2px ${colors.primary};
         color: ${colors.primary} ;
         padding: 10px;
         border-radius: 3px;
+        box-shadow: inset 0px 0px 0px 2px ${colors.primary};
     }
 
     &:hover{
@@ -37,4 +40,9 @@ export const Link = styled(NavLink)`
 
 export const Img = styled.img `
     cursor: ${props => props.href !== undefined ? 'pointer' : null};
+
+    &:hover{
+        filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+    }
+
 `;

@@ -1,5 +1,5 @@
-import React, {useCallback} from 'react';
-import {useNavigate, useLocation } from 'react-router-dom';
+import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import * as Nav from './style';
 
 
@@ -12,7 +12,7 @@ import * as Nav from './style';
  */
  export class NavLink extends React.Component{
     render() {
-        const {to, accentuated, children} = this.props;
+        const {to, accentuated, dysplay, icon} = this.props;
 
         let className;
         if(accentuated){className = 'accentuated'}
@@ -22,7 +22,7 @@ import * as Nav from './style';
                 to={to}
                 className = {className}
             >
-            {children}
+                {icon} <span>{dysplay}</span>
             </Nav.Link>
         )
     }
@@ -30,7 +30,7 @@ import * as Nav from './style';
 
 
 /**
- * * Create link
+ * * Create link img
  * 
  * @param src uri on image or svg
  * @param alt description of image
