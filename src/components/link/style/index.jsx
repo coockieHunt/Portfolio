@@ -49,11 +49,6 @@ export const ExternalLink = styled.a`
         margin-right: 5px;
     }
 
-    &.active {
-        color: ${props => props.className === "accentuated" ? "white !important" : colors.primary}; ;
-        background-color: ${props => props.className === "accentuated" ? colors.primary : null}; ;
-    }
-
     &.accentuated{
         color: ${colors.primary} ;
         padding: 10px;
@@ -62,7 +57,8 @@ export const ExternalLink = styled.a`
     }
 
     &:hover{
-        color: ${colors.secondary};
+        background-color: ${colors.primary}; ;
+        color: white;
     }
 `;
 
