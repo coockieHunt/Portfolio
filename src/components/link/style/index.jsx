@@ -27,11 +27,11 @@ export const InterLink = styled(NavLink)`
         color: ${colors.primary} ;
         padding: 10px;
         border-radius: 3px;
-        box-shadow: inset 0px 0px 0px 2px ${colors.primary};
+        box-shadow: inset 0px 0px 0px 2px ${props => props.color !== undefined ? props.color : colors.primary};
     }
 
     &:hover{
-        color: ${colors.secondary};
+        color: ${props => props.color !== undefined ? props.color : colors.primary};
     }
 `;
 
@@ -50,14 +50,14 @@ export const ExternalLink = styled.a`
     }
 
     &.accentuated{
-        color: ${colors.primary} ;
+        color: ${props => props.color !== undefined ? props.color : colors.primary};
         padding: 10px;
         border-radius: 3px;
-        box-shadow: inset 0px 0px 0px 2px ${colors.primary};
+        box-shadow: inset 0px 0px 0px 2px ${props => props.color !== undefined ? props.color : colors.primary};
     }
 
     &:hover{
-        background-color: ${colors.primary}; ;
+        background-color: ${props => props.color !== undefined ? props.color : colors.primary};
         color: white;
     }
 `;

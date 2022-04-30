@@ -16,19 +16,17 @@ import * as Nav from './style';
         this.state = {to: null};
     }
 
-
-
-    
     render() {
-        const {to, accentuated, dysplay, icon, external} = this.props;
+        const {to, accentuated, dysplay, icon, external, color} = this.props;
 
         let className;
         if(accentuated){className = 'accentuated'}
         if(external){
             return(
                 <Nav.ExternalLink
-                href={to}
-                className = {className}
+                    href={to}
+                    className = {className}
+                    color={color}
                 >
                     {icon} <span>{dysplay}</span> 
                 </Nav.ExternalLink>
@@ -39,6 +37,7 @@ import * as Nav from './style';
                 <Nav.InterLink
                     to={to}
                     className = {className}
+                    color={color}
                 >
                     {icon} <span>{dysplay}</span> 
                 </Nav.InterLink>
