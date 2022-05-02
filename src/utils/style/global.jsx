@@ -41,5 +41,5 @@ export const MainContainerStyle = styled.div`
     justify-content: space-between;
     flex-direction: column;
 
-    height: 100vh;
+    height: 93vh;
 `

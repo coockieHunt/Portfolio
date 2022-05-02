@@ -41,7 +41,7 @@ export class MainContainer extends React.Component{
 Root.render(
     <BrowserRouter>
         <GlobalStyle />
-            <HeaderComponents />
+            <HeaderComponents hw="hellow wolrd" />
             <MainContainer>
                 <Routes>
                     <Route path="/" element={<HomePage />}/>

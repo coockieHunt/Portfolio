@@ -1,4 +1,4 @@
-const size_Width = {
+export const size_Width = {
     mobile: '375px',
     tablet: '768px',
     laptop: '1024px',
