@@ -6,7 +6,7 @@ import Roboto from '../font/roboto/Roboto-Regular.ttf';
 export const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'Roboto';
-        src: url(${Roboto}) format('Roboto'),
+        src: url(${Roboto}) format('Roboto');
         font-weight: 300;
         font-style: normal;
     }

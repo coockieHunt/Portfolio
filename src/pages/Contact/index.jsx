@@ -42,8 +42,8 @@ class ContactPage extends React.Component {
 
     render() {
         return(
-            <React.Fragment>
-                <Contact.Container>
+            <Contact.Container>
+                <Contact.Box>
                     <Contact.Side>
                         <Contact.Title>Information de Contact</Contact.Title>
                         <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
@@ -107,8 +107,8 @@ class ContactPage extends React.Component {
                             </ButtonConponent.CTA>
                         </FormComponent.Groupe>
                     </Contact.Form>
-                </Contact.Container>
-            </React.Fragment>
+                </Contact.Box>
+            </Contact.Container>
         )
     }
 }

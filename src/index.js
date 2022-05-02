@@ -38,22 +38,21 @@ export class MainContainer extends React.Component{
     }
 }
 
-
 Root.render(
     <BrowserRouter>
         <GlobalStyle />
-        <MainContainer>
             <HeaderComponents />
-            <Routes>
-                <Route path="/" element={<HomePage />}/>
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/project" element={<ProjectPage />} />
-                <Route path="/about/me" element={<AboutMePage />} />
-                {/* error page */}
-                <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-            <FooterConponents />
-        </MainContainer>
+            <MainContainer>
+                <Routes>
+                    <Route path="/" element={<HomePage />}/>
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/project" element={<ProjectPage />} />
+                    <Route path="/about/me" element={<AboutMePage />} />
+                    {/* error page */}
+                    <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+                <FooterConponents />
+            </MainContainer>
     </BrowserRouter>,
 );
 

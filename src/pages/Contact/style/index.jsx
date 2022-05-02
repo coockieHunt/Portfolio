@@ -3,16 +3,24 @@ import colors from "../../../utils/style/library/color";
 import shadow from "../../../utils/style/library/shadow";
 import { device } from "../../../utils/style/library/size";
 
+export const Container = styled.div`
+    height: 95%;
+    width: 90%;
+    margin: auto;
 
-export const Container = styled.div `
     display: flex;
-    margin:  0 auto 0 auto;
+    justify-content: space-around;
+    align-items: center;
+`
+
+export const Box = styled.div `
+    display: flex;
+    margin: auto;
     box-shadow: ${shadow.fence};
     border-radius: 2%;
 
     @media ${device.laptop} { 
-        width : 90%;
-        margin: auto;
+        width: 100%;
     }
 `;
 
@@ -73,7 +81,6 @@ export const Other= styled.div`
     flex-grow: 4;
 
     margin-top: 30%;
-
 `;
 
 export const Option = styled.div`

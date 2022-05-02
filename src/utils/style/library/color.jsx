@@ -5,7 +5,7 @@ const colors = {
     secondary: '#7563e9',
     spot: '#760ca4',
     Complementary: '#760ca4',
-    white: '#f0f0f0',
+    white: '#FFFFFF',
     grey: '#737272',
   }
   
