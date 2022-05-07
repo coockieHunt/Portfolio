@@ -1,17 +1,20 @@
-import styled from "styled-components";
+import * as Project from './style'
 
+import * as CardComponent from "../../components/card/card"
 
-const PHText = styled.div`
-    text-align: center;
-    font-size: 1.2em;
-    padding:30px;
-    height: 100%;
-
-`;
 
 function ProjectPage(){
     return(
-        <PHText>✍️ List of my project ✍️</PHText>
+        <Project.Container>
+            <Project.CardContainer>
+                <CardComponent.Card title="Projet 1"/>
+                <CardComponent.Card title="Projet 2"/>
+                <CardComponent.Card title="Projet 3"/>
+                <CardComponent.Card title="Projet 4"/>
+                <CardComponent.Card title="Projet 5"/>
+                <CardComponent.Card title="Projet 6"/>
+            </Project.CardContainer>
+        </Project.Container>
     )
 }
 
