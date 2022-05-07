@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate } from 'react-router-dom';
-import {Button, Cp} from './style'
+import {Button, Cp, BurgerBox} from './style'
 import { BUTTON } from "../../config"
 import { HiOutlineClipboardCopy } from 'react-icons/hi';
 
@@ -94,3 +94,32 @@ export class CP extends React.Component{
     }
 }
 
+export class Burger extends React.Component{
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            active: false,
+        };
+
+        this.HandelOnClick = this.HandelOnClick.bind(this);
+    }
+
+    HandelOnClick(e){
+        this.setState({ active: !this.state.active });
+    }
+    
+    render(){
+        const {OnClick} = this.props;
+
+        return (
+            <BurgerBox 
+                onClick={() => { OnClick(); this.HandelOnClick(); }}
+                className={this.state.active ? "active" : null}>
+            
+                <span></span>
+            </BurgerBox>
+        )
+    }
+}
