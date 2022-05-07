@@ -5,42 +5,46 @@ import colors from "../../../utils/style/library/color";
 
 
 export const Container = styled.div`
-    width: 100%;
+    width: 300px;
     box-shadow: ${shadow.fence};
     border-radius: 15px;
 
     display: flex;
     flex-direction: column;
 
-    &:hover{
-        border: 1px solid ${colors.primary};
+    overflow: hidden;
 
+    &:hover{
+        & .footer{
+            height: 20%;
+        }
     }
+
     & p {
         padding: 10px;
+    }
+
+    & img{
+        overflow: hidden;
     }
 `
 
 export const Header = styled.div`
     width: 100%;
-    padding: 10px;
+    position: absolute;
 
     & h2{
         float: left;
-    }
-
-    & span{
-        float: right;
+        background-color: ${colors.primary};
+        padding: 10px;
+        margin-left: 10px;
+        border-radius: 0 0 5px 5px;
+        color: white;
     }
 `
 
 
 export const Fotter = styled.div`
-    width: 100%;
-    padding: 5px 0;
-    padding: 10px;
-
-
-    display: flex;
-    justify-content: space-between;
+  height: 10%;
+  position: relative; 
 `

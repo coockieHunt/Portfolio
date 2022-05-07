@@ -15,10 +15,10 @@ export const Container = styled.div`
 `;
 
 export const CardContainer = styled.div`
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
-    gap: 10px 10px; 
+  --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 2fr));
+    grid-gap: 1rem;
     
     width : 95%;
     margin: 15px auto 0 auto;
