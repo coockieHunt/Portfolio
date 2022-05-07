@@ -11,6 +11,11 @@ export const ENVI = {
     DIR : " /opt/portfolio/src/"
 }
 
+export const SOCIAL_LINK = {
+    "DeviantArt" :  'https://www.deviantart.com/coockiehunt',
+    "GitHub" :  'https://github.com/coockieHunt',
+}
+
 export const ALERT = {
     "ok" : {
         'icon' : <MdOutlineVerifiedUser className='react-icons-middel'   />,

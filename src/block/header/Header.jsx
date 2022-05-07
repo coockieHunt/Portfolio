@@ -8,12 +8,16 @@ import {size_Width} from '../../utils/style/library/size'
 
 import MainLogo from '../../utils/img/logo/logo.svg'
 
+//config
+import { SOCIAL_LINK } from '../../config';
+
 import { 
     IoInformationCircleSharp, 
     IoLibrarySharp,
     IoMailSharp,
     IoLogoGithub,
-    IoHomeSharp
+    IoHomeSharp,
+    IoLogoDeviantart
 } from 'react-icons/io5';
 
 
@@ -110,10 +114,21 @@ export default class HeaderComponents extends React.Component{
                                 <NavComponent.NavLink 
                                     accentuated
                                     external
-                                    to='https://github.com/coockieHunt/portfolio'
-                                    dysplay= 'Lient git'
+                                    to= {SOCIAL_LINK.GitHub}
+                                    dysplay= 'GitHub'
                                     icon={<IoLogoGithub/>}
                                     color='#6e5494'
+                                />
+                            </Header.NavElement>
+
+                            <Header.NavElement>
+                                <NavComponent.NavLink 
+                                    accentuated
+                                    external
+                                    to= {SOCIAL_LINK.DeviantArt}
+                                    dysplay= 'DeviantArt'
+                                    icon={<IoLogoDeviantart/>}
+                                    color='#00e59b'
                                 />
                             </Header.NavElement>
                         </Header.NavRight>

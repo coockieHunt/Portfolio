@@ -67,16 +67,11 @@ export const NavLeft = styled.ul`
 export const NavRight = styled.ul`
     display: flex;
     
-    & ul li a{
-        padding-left: 10ox;
-    }
-
     @media ${device.laptop} { 
-        width: 60%;
+        width: 100%;
         margin: auto;
         margin-top: 10%;
-        flex-direction: column;
-        text-align: center;
+        justify-content: center;
     }
 `;
 
