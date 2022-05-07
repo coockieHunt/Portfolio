@@ -17,7 +17,7 @@ import * as Nav from './style';
     }
 
     render() {
-        const {to, accentuated, dysplay, icon, external, color} = this.props;
+        const {to, onClick, accentuated, dysplay, icon, external, color} = this.props;
 
         let className;
         if(accentuated){className = 'accentuated'}
@@ -38,6 +38,7 @@ import * as Nav from './style';
                     to={to}
                     className = {className}
                     color={color}
+                    onClick={onClick}
                 >
                     {icon} <span>{dysplay}</span> 
                 </Nav.InterLink>

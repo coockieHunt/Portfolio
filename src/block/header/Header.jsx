@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 import * as Header from "./style"
 import * as NavComponent from "../../components/link/Link"
@@ -12,8 +12,10 @@ import {
     IoInformationCircleSharp, 
     IoLibrarySharp,
     IoMailSharp,
-    IoLogoGithub
+    IoLogoGithub,
+    IoHomeSharp
 } from 'react-icons/io5';
+
 
 export default class HeaderComponents extends React.Component{
     constructor(props){
@@ -25,7 +27,6 @@ export default class HeaderComponents extends React.Component{
         }
 
         window.addEventListener('resize', (e) => this.screenWhidthChanged(e));
-
         this.ShowHide = this.ShowHide.bind(this);
     }
 
@@ -46,7 +47,6 @@ export default class HeaderComponents extends React.Component{
         let toggleNav = this.state.toggleNav
         let BreakPointSize = parseInt(size_Width.laptop)
 
-        console.log(screenWidth)
         return(
             <Header.Container>
                 <Header.Title>
@@ -65,11 +65,25 @@ export default class HeaderComponents extends React.Component{
                 {(toggleNav || screenWidth > BreakPointSize) && (
                     <Header.Nav>
                         <Header.NavLeft>
+                            {(screenWidth < BreakPointSize) && (
+                                <Header.NavElement>
+                                    <NavComponent.NavLink 
+                                        to='/'
+                                        dysplay= 'Accueil'
+                                        icon = {<IoHomeSharp/>}
+                                        onClick={this.ShowHide}
+                                    />
+                                </Header.NavElement>
+                            )}
+                           
+                       
+                           
                             <Header.NavElement>
                                 <NavComponent.NavLink 
                                     to='contact'
                                     dysplay=  'Contact'
                                     icon = {<IoMailSharp/>}
+                                    onClick={this.ShowHide}
                                 />
                             </Header.NavElement>
 
@@ -78,6 +92,7 @@ export default class HeaderComponents extends React.Component{
                                     to='/project'
                                     dysplay=  'Projet'
                                     icon = {<IoLibrarySharp/>}
+                                    onClick={this.ShowHide}
                                 />
                             </Header.NavElement>
 
@@ -86,6 +101,7 @@ export default class HeaderComponents extends React.Component{
                                     to='/about/me'
                                     dysplay=  'A propos'
                                     icon = {<IoInformationCircleSharp/>}
+                                    onClick={this.ShowHide}
                                 />
                             </Header.NavElement>
                         </Header.NavLeft>

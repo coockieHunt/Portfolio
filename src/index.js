@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {React, useEffect} from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 
 //global style
@@ -19,23 +19,18 @@ import FooterConponents from './block/footer/Footer.jsx'
 const container = document.getElementById('root')
 const Root = createRoot(container)
 
-export class MainContainer extends React.Component{
- 
-    componentDidMount() {
-        document.title = "Gleyze jonathan"
-    }
+
+function MainContainer(props){
+    const location = useLocation()
+
+    useEffect(() => {
+    }, [location])
     
-    render() {
-
-
-        const {children} = this.props;
-
-        return(
-            <MainContainerStyle>
-                {children} 
-            </MainContainerStyle>
-        )
-    }
+    return(
+        <MainContainerStyle>
+            {props.children} 
+        </MainContainerStyle>
+    )
 }
 
 Root.render(
