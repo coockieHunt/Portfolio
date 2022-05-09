@@ -1,12 +1,16 @@
 import React from 'react';
 import * as CardStyle from './style'
 
-import * as ButtonConponent from "../button/button"
-
-
+/**
+ * * Card
+ * 
+ * @param title Title card
+ * @param thumbnail Object thunbnail {src of img, alt}
+ * @param text text on footer
+ */
 export class Card extends React.Component{
     render() {
-        const {title} = this.props;
+        const {title, thumbnail, text} = this.props;
 
         return(
             <CardStyle.Container>
@@ -15,12 +19,12 @@ export class Card extends React.Component{
                 </CardStyle.Header>
 
                 <img 
-                    src={`https://picsum.photos/id/${Math.floor(Math.random() * 500) + 1}/200 `} 
-                    alt="Grapefruit slice atop a pile of other slices">
+                    src={thumbnail.src} 
+                    alt={thumbnail.alt} >
                 </img>
 
                 <CardStyle.Fotter className='footer'>
-                    <p>Aliqua dolor commodo ullamco culpa deserunt consectetur ut.</p>
+                    <p>{text}</p>
                 </CardStyle.Fotter>
               
             </CardStyle.Container>

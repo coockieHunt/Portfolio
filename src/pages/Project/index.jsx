@@ -4,15 +4,22 @@ import * as CardComponent from "../../components/card/card"
 
 
 function ProjectPage(){
+    let thumbnail = {
+        'src' : `https://picsum.photos/id/${Math.floor(Math.random() * 500) + 1}/200`,
+        'alt' : 'lorem ipsum'
+    }
+
+    let Text = "Consequat qui cupidatat officia voluptate eiusmod aute."
+    
     return(
         <Project.Container>
             <Project.CardContainer>
-                <CardComponent.Card title="Projet 1"/>
-                <CardComponent.Card title="Projet 2"/>
-                <CardComponent.Card title="Projet 3"/>
-                <CardComponent.Card title="Projet 4"/>
-                <CardComponent.Card title="Projet 5"/>
-                <CardComponent.Card title="Projet 6"/>
+                <CardComponent.Card title="Projet 1" thumbnail={thumbnail} text={Text}/>
+                <CardComponent.Card title="Projet 2" thumbnail={thumbnail} text={Text}/>
+                <CardComponent.Card title="Projet 3" thumbnail={thumbnail} text={Text}/>
+                <CardComponent.Card title="Projet 4" thumbnail={thumbnail} text={Text}/>
+                <CardComponent.Card title="Projet 5" thumbnail={thumbnail} text={Text}/>
+                <CardComponent.Card title="Projet 6" thumbnail={thumbnail} text={Text}/>
             </Project.CardContainer>
         </Project.Container>
     )

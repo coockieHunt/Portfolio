@@ -4,6 +4,14 @@ import {Button, Cp, BurgerBox} from './style'
 import { BUTTON } from "../../config"
 import { HiOutlineClipboardCopy } from 'react-icons/hi';
 
+/**
+ * * CallToAction button
+ * 
+ * @param Type Type of button submit or button
+ * @param theme Color of theme
+ * @param icon icon of button <svg>
+ * @param disabled if button dissabled
+ */
 export class CTA extends React.Component{
     constructor(props) {
         super(props);
@@ -44,6 +52,13 @@ export class CTA extends React.Component{
     }
 }
 
+/**
+ * * create internal link
+ * 
+ * @param theme Color of theme
+ * @param icon icon of button <svg>
+ * @param disabled if button dissabled
+ */
 export function Link(props) {
     let To = props.to
     const navigate = useNavigate();
@@ -73,7 +88,7 @@ export class CP extends React.Component{
     }
     
 
-    HandelOnClick(func){
+    HandelOnClick(){
         if(this.props.disabled){return null}
 
 
