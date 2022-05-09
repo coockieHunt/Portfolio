@@ -1,8 +1,8 @@
 import React from 'react';
 
 import * as Contact from "./style"
-import * as FormComponent from "../../components/form/Form"
-import * as ButtonConponent from "../../components/button/button"
+import * as FormComponent from "../../components/form/FormComponent"
+import * as ButtonConponent from "../../components/button/ButtonComponent"
 
 import { 
     IoMdSend, 

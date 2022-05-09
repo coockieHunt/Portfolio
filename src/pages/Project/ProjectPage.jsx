@@ -1,6 +1,6 @@
 import * as Project from './style'
 
-import * as CardComponent from "../../components/card/card"
+import * as CardComponent from "../../components/card/CardComponent"
 
 
 function ProjectPage(){

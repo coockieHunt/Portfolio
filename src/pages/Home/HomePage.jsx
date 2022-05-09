@@ -1,6 +1,6 @@
 import * as Home from './style'
-import * as TextComponent from '../../components/text/Text'
-import * as ButtonConponent from '../../components/button/button'
+import * as TextComponent from '../../components/text/TextComponent'
+import * as ButtonConponent from '../../components/button/ButtonComponent'
 import NodeLogo from '../../utils/img/logo/Node.js_light.svg'
 
 function HomePage(){

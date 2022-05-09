@@ -6,15 +6,15 @@ import { createRoot } from 'react-dom/client';
 import {GlobalStyle, MainContainerStyle} from './utils/style/global';
 
 //pages
-import NotFoundPage from './pages/Error/NotFound'
-import HomePage from './pages/Home'
-import ContactPage from './pages/Contact'
-import ProjectPage from './pages/Project'
-import AboutMePage from './pages/about/my'
+import NotFoundPage from './pages/Error/NotFoundPage'
+import HomePage from './pages/Home/HomePage'
+import ContactPage from './pages/Contact/ContactPage'
+import ProjectPage from './pages/Project/ProjectPage'
+import AboutMePage from './pages/about/AboutPage'
 
 //compenents
-import HeaderComponents from './block/header/Header.jsx'
-import FooterConponents from './block/footer/Footer.jsx'
+import HeaderComponents from './block/header/HeaderBlock'
+import FooterConponents from './block/footer/FooterBlock'
 
 const container = document.getElementById('root')
 const Root = createRoot(container)

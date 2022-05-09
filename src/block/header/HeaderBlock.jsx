@@ -1,8 +1,8 @@
 import React from 'react';
 
 import * as Header from "./style"
-import * as NavComponent from "../../components/link/Link"
-import * as ButtonComponent from '../../components/button/button';
+import * as NavComponent from "../../components/link/LinkComponent"
+import * as ButtonComponent from '../../components/button/ButtonComponent';
 
 import {size_Width} from '../../utils/style/library/size'
 
