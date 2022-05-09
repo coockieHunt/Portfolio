@@ -61,8 +61,7 @@ export default class HeaderComponents extends React.Component{
                     />
                 {(screenWidth < BreakPointSize) && (
                     <div>
-                        {/* <ButtonComponent.CTA OnClick={this.ShowHide} className="NoMargin" type='button'>{toggleNav ? "hide" : "show"}</ButtonComponent.CTA> */}
-                        <ButtonComponent.Burger OnClick={this.ShowHide}/>
+                        <ButtonComponent.Burger OnClick={this.ShowHide} ActiveNav={toggleNav}/>
                     </div>
                 )}
                 </Header.Title>
