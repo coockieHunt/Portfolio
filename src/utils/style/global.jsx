@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import styled from "styled-components";
-
 import Roboto from '../font/roboto/Roboto-Regular.ttf';
+import colors from '../style/library/color'
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -16,13 +16,11 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: 'Roboto', Helvetica, sans-serif;
-
     }
 
     ul, li{
         list-style: none;
     }
-
     
     .middel {
         vertical-align: middle;
@@ -31,6 +29,61 @@ export const GlobalStyle = createGlobalStyle`
     .NoMargin{
         margin: 0 !important;
     }
+
+    h1{
+        color: ${colors.primary}
+    }
+
+    p{
+        font-weight: 200;
+    }
+
+    body[data-theme='light']{
+        transition: all 0.5s;
+        background-color: white ;
+
+        color: black;
+
+        & .background{
+            transition: all 0.5s;
+            background-color: white;
+        }
+
+        & input, & textarea{
+            transition: all 0.5s;
+            background-color: white;
+        }
+    }
+
+
+    body[data-theme='dark']{
+        transition: all 0.5s;
+        background-color:  #121212  ;
+
+        color: white;
+
+        & .background{
+            transition: all 0.5s;
+            background-color: #202020;
+        }
+
+        & .backgroundInvert, & .backgroundInvert:after, & .backgroundInvert:before{
+            background-color: white;
+        }
+
+        & input, & textarea{
+            transition: all 0.5s;
+            background-color: #303134;
+            color: white;
+        }
+
+
+        & input:focus, & textarea:focus{
+            color: white;
+        }
+    }
+
+
 `
 /*
     ? main constainer

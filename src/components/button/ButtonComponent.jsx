@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate } from 'react-router-dom';
-import {Button, Cp, BurgerBox} from './style'
+import {Button, Cp, Img} from './style'
 import { BUTTON } from "../../config"
 import { HiOutlineClipboardCopy } from 'react-icons/hi';
 
@@ -76,7 +76,6 @@ export function Link(props) {
 }
 
 
-
 export class CP extends React.Component{
     constructor(props) {
         super(props);
@@ -109,12 +108,18 @@ export class CP extends React.Component{
     }
 }
 
-export function Burger(props){
+
+/**
+ * * Create nav link img
+ * 
+ * @param src uri on image or svg
+ * @param alt description of image
+ * @param to url on click 
+ */
+ export function NavImg(props) {
+  
     return (
-        <BurgerBox 
-            onClick={() => {props.OnClick()}}
-            className={props.ActiveNav ? "active" : null}>
-            <span></span>
-        </BurgerBox>
-    )
+        <Img href={props.to} color={props.color}>{props.icon}</Img>
+    );
 }
+

@@ -10,6 +10,10 @@ import {
     IoIosMail
 } from 'react-icons/io';
 
+import {
+    ImCross
+} from 'react-icons/im'
+
 
 
 class ContactPage extends React.Component {
@@ -27,6 +31,7 @@ class ContactPage extends React.Component {
         this.state = this.DefaultValue;
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleRest = this.handleRest.bind(this);
     }
 
     handleChange(event) {
@@ -40,10 +45,15 @@ class ContactPage extends React.Component {
         this.setState(this.DefaultValue);
     }
 
+    handleRest(event){
+        event.preventDefault();
+        this.setState(this.DefaultValue);
+    }
+
     render() {
         return(
             <Contact.Container>
-                <Contact.Box>
+                <Contact.Box className='background'>
                     <Contact.Side>
                         <Contact.Title>Information de Contact</Contact.Title>
                         <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
@@ -59,7 +69,7 @@ class ContactPage extends React.Component {
                             
 
                         </Contact.Other>
-                        <p>Lorem ipsum, mais truc en ski</p>
+                        <p>À votre disposition pour toute question.</p>
                     </Contact.Side>
                     <Contact.Form>
                         <FormComponent.Groupe onSubmit={this.handleSubmit}>
@@ -98,13 +108,23 @@ class ContactPage extends React.Component {
                                 placeHolder="Votre message ..."
                                 required
                             />
-                            <ButtonConponent.CTA 
-                                disabled={false} 
-                                type="submit"
-                                icon= {<IoMdSend/>}
-                                onClick={this.handleSubmit}>
-                            envoyer
-                            </ButtonConponent.CTA>
+                            <Contact.CTA>
+                                <ButtonConponent.CTA 
+                                    disabled={false} 
+                                    type="submit"
+                                    icon= {<ImCross/>}
+                                    onClick={this.handleSubmit}
+                                    theme= "warning">
+                                Annuler
+                                </ButtonConponent.CTA>
+                                <ButtonConponent.CTA 
+                                    disabled={false} 
+                                    type="submit"
+                                    icon= {<IoMdSend/>}
+                                    onClick={this.handleSubmit}>
+                                Envoyer
+                                </ButtonConponent.CTA>
+                            </Contact.CTA>
                         </FormComponent.Groupe>
                     </Contact.Form>
                 </Contact.Box>

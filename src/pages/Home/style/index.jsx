@@ -31,6 +31,7 @@ export const PickUpText  = styled.div`
         @media ${device.laptop} { 
             text-align: center;
         }
+        margin-bottom: 10px;
     }
 
     & p{

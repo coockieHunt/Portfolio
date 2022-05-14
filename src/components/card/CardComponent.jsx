@@ -13,7 +13,7 @@ export class Card extends React.Component{
         const {title, thumbnail, text} = this.props;
 
         return(
-            <CardStyle.Container>
+            <CardStyle.Container className='background'>
                 <CardStyle.Header>
                     <h2>{title}</h2>
                 </CardStyle.Header>

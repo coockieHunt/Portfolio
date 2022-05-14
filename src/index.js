@@ -1,9 +1,10 @@
-import {React, useEffect} from 'react';
+import {React, useEffect, useContext} from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 
 //global style
 import {GlobalStyle, MainContainerStyle} from './utils/style/global';
+import {ThemeContext} from './context/ThemeContext';
 
 //pages
 import NotFoundPage from './pages/Error/NotFoundPage'
@@ -15,6 +16,7 @@ import AboutMePage from './pages/about/AboutPage'
 //compenents
 import HeaderComponents from './block/header/HeaderBlock'
 import FooterConponents from './block/footer/FooterBlock'
+import ThemeContextProvider from './context/ThemeContext';
 
 const container = document.getElementById('root')
 const Root = createRoot(container)
@@ -33,10 +35,21 @@ function MainContainer(props){
     )
 }
 
+function GlobalStyleTheme(props){
+    const {theme} = useContext(ThemeContext)
+    let themeType = null;
+
+    if(theme){themeType = 'lightTheme'}else{themeType = 'darkTheme'}
+    return(
+        <GlobalStyle theme={themeType} />
+    )
+}
+
 Root.render(
     <BrowserRouter>
-        <GlobalStyle />
-            <HeaderComponents hw="hellow wolrd" />
+        <ThemeContextProvider>
+            <GlobalStyleTheme/>
+            <HeaderComponents/>
             <MainContainer>
                 <Routes>
                     <Route path="/" element={<HomePage />}/>
@@ -48,6 +61,7 @@ Root.render(
                 </Routes>
                 <FooterConponents />
             </MainContainer>
+        </ThemeContextProvider>
     </BrowserRouter>,
 );
 

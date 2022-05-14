@@ -6,84 +6,73 @@ import { device } from "../../../utils/style/library/size";
 export const Container = styled.div`
     display: flex;
     align-items: center;
-    padding: 0 10px;
-    user-select: none;
+    justify-content: space-between;
+
+    position: relative;
+
     width: 100%;
+    height: 50px;
+
+    padding: 5px 20px;
 
     @media ${device.laptop} { 
-        flex-direction: column;
-        padding: 10px 0 10px 0;
+        margin-bottom: 15px;
     }
-`;
+`
 
-export const Title = styled.div`
-    color: ${colors.primary};
-    padding: 10px;
+export const Left = styled.div`
     display: flex;
-    & img{
-        margin: auto; 
-        height: 19px;
-    }
+    align-items: center;
 
-    border-right: 1px solid ${colors.primary_a};
+    & img{
+        width:  18px;
+    }
+`
+
+export const Right = styled.div`
+    display: flex;
+    align-items: center;
+    height: 90%;
+    gap: 15px;
+`
+
+export const NavElement = styled.div`
+    display: flex;
+
+    display: flex;
+    gap: 15px;
+    padding-left: 10px;
+    margin-left: 10px;
+
+    border-left: 1px solid ${colors.primary_a};
+
 
     @media ${device.laptop} { 
-        justify-content: space-between;
-        width: 100%;
-        border-right: 0;
-
-        & img{
-            margin: auto 0; 
-            height: 19px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-left: 0;
+        & a{
+            height: 100px;
         }
     }
-`;
+`
 
-export const Nav = styled.ul`
-    display: flex;
-    justify-content:space-between;
 
-    width: 100%;
+export const Nav = styled.div`
     @media ${device.laptop} { 
-        width: 60%;
-        height: 100vmax;
-        margin: 20px 0 0 0;
-        padding: 0 0 20px 0;
-        flex-direction: column;
-        text-align: center;
-
-    }
-`;
-
-export const NavLeft = styled.ul`
-    display: flex;
-
-    @media ${device.laptop} { 
-        margin: auto;
-        flex-direction: column;
-    }
-`;
-
-export const NavRight = styled.ul`
-    display: flex;
-    
-    @media ${device.laptop} { 
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        margin-left: 0;
         width: 100%;
-        margin: auto;
-        margin-top: 10%;
-        justify-content: center;
-    }
-`;
 
-export const NavElement = styled.li`
-    padding: 10px;
-    color: ${colors.secondary};
-    font-weight: bold;
-    &:hover{
-        color: ${colors.primary};
-    }
-`;
 
+        z-index: 999999;
+    }
+
+`
 
 
 

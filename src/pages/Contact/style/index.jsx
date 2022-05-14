@@ -3,6 +3,7 @@ import colors from "../../../utils/style/library/color";
 import shadow from "../../../utils/style/library/shadow";
 import { device } from "../../../utils/style/library/size";
 
+
 export const Container = styled.div`
     height: 95%;
     width: 90%;
@@ -54,7 +55,7 @@ export const Side= styled.div`
     border-radius: 2%;
     width: 700px;
 
-    background-color: ${colors.primary};
+    background-color: ${props => colors.primary};
     box-shadow: ${shadow.fence};
 
     color: ${colors.white};
@@ -102,4 +103,11 @@ export const Option = styled.div`
     }
 `
 
+export const CTA = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+
+    margin-top: 15px;
+`
 

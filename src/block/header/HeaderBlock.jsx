@@ -2,7 +2,10 @@ import React from 'react';
 
 import * as Header from "./style"
 import * as NavComponent from "../../components/link/LinkComponent"
-import * as ButtonComponent from '../../components/button/ButtonComponent';
+import * as ButtonUtilsComponent from '../../components/button/ButtonUtilsComponent';
+import * as ButtonUComponent from '../../components/button/ButtonComponent';
+import {TogglerDarkMode}  from '../../components/button/ButtonUtilsComponent'
+
 
 import {size_Width} from '../../utils/style/library/size'
 
@@ -13,11 +16,11 @@ import { SOCIAL_LINK } from '../../config';
 
 import { 
     IoInformationCircleSharp, 
-    IoLibrarySharp,
     IoMailSharp,
     IoLogoGithub,
     IoHomeSharp,
-    IoLogoDeviantart
+    IoLogoDeviantart,
+    IoLibrarySharp
 } from 'react-icons/io5';
 
 
@@ -53,86 +56,63 @@ export default class HeaderComponents extends React.Component{
 
         return(
             <Header.Container>
-                <Header.Title>
+                <Header.Left>
                     <NavComponent.NavImg 
-                        src={MainLogo} 
-                        alt="Logo personal" 
-                        to='/'
-                    />
-                {(screenWidth < BreakPointSize) && (
-                    <div>
-                        <ButtonComponent.Burger OnClick={this.ShowHide} ActiveNav={toggleNav}/>
-                    </div>
-                )}
-                </Header.Title>
-
-                {(toggleNav || screenWidth > BreakPointSize) && (
+                    src={MainLogo} 
+                    alt="Logo personal" 
+                    to='/'/> 
+                    
                     <Header.Nav>
-                        <Header.NavLeft>
-                            {(screenWidth < BreakPointSize) && (
-                                <Header.NavElement>
-                                    <NavComponent.NavLink 
-                                        to='/'
-                                        dysplay= 'Accueil'
-                                        icon = {<IoHomeSharp/>}
-                                        onClick={this.ShowHide}
-                                    />
-                                </Header.NavElement>
-                            )}
-                           
-                            <Header.NavElement>
+                        {(toggleNav || screenWidth > BreakPointSize) && (
+                            <Header.NavElement className={(screenWidth < BreakPointSize) && ('background')}>
+                                <NavComponent.NavLink 
+                                    to='/'
+                                    dysplay= 'Accueil'
+                                    icon = {<IoHomeSharp/>}
+                                    onClick={this.ShowHide}/>
+
                                 <NavComponent.NavLink 
                                     to='contact'
                                     dysplay=  'Contact'
                                     icon = {<IoMailSharp/>}
-                                    onClick={this.ShowHide}
-                                />
-                            </Header.NavElement>
+                                    onClick={this.ShowHide}/>
 
-                            <Header.NavElement>
                                 <NavComponent.NavLink 
                                     to='/project'
                                     dysplay=  'Projet'
                                     icon = {<IoLibrarySharp/>}
-                                    onClick={this.ShowHide}
-                                />
-                            </Header.NavElement>
+                                    onClick={this.ShowHide}/>
 
-                            <Header.NavElement>
                                 <NavComponent.NavLink 
                                     to='/about/me'
                                     dysplay=  'A propos'
                                     icon = {<IoInformationCircleSharp/>}
-                                    onClick={this.ShowHide}
-                                />
+                                    onClick={this.ShowHide}/>
                             </Header.NavElement>
-                        </Header.NavLeft>
-                        <Header.NavRight>
-                            <Header.NavElement>
-                                <NavComponent.NavLink 
-                                    accentuated
-                                    external
-                                    to= {SOCIAL_LINK.GitHub}
-                                    dysplay= 'GitHub'
-                                    icon={<IoLogoGithub/>}
-                                    color='#6e5494'
-                                />
-                            </Header.NavElement>
-
-                            <Header.NavElement>
-                                <NavComponent.NavLink 
-                                    accentuated
-                                    external
-                                    to= {SOCIAL_LINK.DeviantArt}
-                                    dysplay= 'DeviantArt'
-                                    icon={<IoLogoDeviantart/>}
-                                    color='#00e59b'
-                                />
-                            </Header.NavElement>
-                        </Header.NavRight>
-                    
+                        )}
                     </Header.Nav>
-                )}
+                </Header.Left>
+
+                <Header.Right>
+                    <TogglerDarkMode/>
+
+                    <ButtonUComponent.NavImg
+                        icon={<IoLogoDeviantart/>}
+                        to= {SOCIAL_LINK.DeviantArt}
+                        color='#00e59b'
+                    />
+
+                    <ButtonUComponent.NavImg
+                        icon={<IoLogoGithub/>}
+                        to= {SOCIAL_LINK.GitHub}
+                        color='#6e5494'
+                    />
+                   
+
+                    {(screenWidth < BreakPointSize) && (
+                        <ButtonUtilsComponent.Burger OnClick={this.ShowHide} ActiveNav={toggleNav} className="backgroundInvert"/>
+                    )}
+                </Header.Right>
             </Header.Container>
         )
     }

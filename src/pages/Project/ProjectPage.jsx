@@ -1,15 +1,13 @@
 import * as Project from './style'
-
 import * as CardComponent from "../../components/card/CardComponent"
 
-
 function ProjectPage(){
-    let thumbnail = {
+    const thumbnail = {
         'src' : `https://picsum.photos/id/${Math.floor(Math.random() * 500) + 1}/200`,
         'alt' : 'lorem ipsum'
     }
 
-    let Text = "Consequat qui cupidatat officia voluptate eiusmod aute."
+    const Text = "Consequat qui cupidatat officia voluptate eiusmod aute."
     
     return(
         <Project.Container>

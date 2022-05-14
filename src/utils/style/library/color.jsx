@@ -7,7 +7,7 @@ const colors = {
     Complementary: '#760ca4',
     white: '#FFFFFF',
     grey: '#737272',
-  }
-  
-  export default colors
+}
+
+export default colors
   

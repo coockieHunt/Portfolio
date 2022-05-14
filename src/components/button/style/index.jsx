@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import colors from "../../../utils/style/library/color";
 import { BUTTON } from "../../../config"
+import {useNavigate} from 'react-router-dom';
+
 
 export const Button = styled.button`
     padding : 15px;
-    margin-top: 15px;
     color: ${colors.white};
 
     border: none;
@@ -53,89 +54,11 @@ export const Cp= styled.div`
     }
 `;
 
-export const BurgerBox = styled.div`
-    width: 50px;
-    height: 50px;
-    position: relative;
-
-    &.active {
-        /* transform-origin: center center; */
+export const Img = styled.a `
+    color: ${props => props.color !== undefined ? props.color : colors.primary};
+`;
 
 
-        & span{
-            background-color: white;
-
-            /* transform: rotate(180deg); */
-
-            &:before &:after{
-            }
-
-            &:before{
-                transform: rotate(-45deg);
-            }
-            
-            &:after{
-                transform: rotate(45deg);
-            }
-
-
-        }
-    }
-
-    & span{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-
-
-        display: block;
-        width: 22px;
-        height: 2px;
-
-        background-color: black;
-        transition: background-color 0.4s;
-        transition: transform 0.5s;
-
-
-        &:before, &:after{
-            content:"";
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            display: block;
-            width: 22px;
-            height: 2px;
-
-            background-color: black;
-
-            transform: translateY(-6px);
-
-            transition: transform 0.5s
-
-
-
-
-        }
-
-        &:after{
-            transform: translateY(6px);
-        }
-    }
-
-    &:hover{
-
-        & span:before{
-            transform: ${props => props.className === "active" ?  "" : "translateY(-8px)"}; ;
-
-        }
-
-        & span:after{
-            transform: ${props => props.className === "active" ? "" : "translateY(8px)"}; ;
-        }
-    }
-`
 
 
 

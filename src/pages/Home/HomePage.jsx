@@ -8,9 +8,10 @@ function HomePage(){
         <Home.Container>
             <Home.PickUp>
                 <Home.PickUpText>
-                    <TextComponent.H1> 
-                        {'développeur full stack '.toUpperCase()}<br/><TextComponent.BackLine>NODE JS</TextComponent.BackLine>
-                    </TextComponent.H1> 
+                    <h1>
+                        {'développeur full stack '.toUpperCase()}<br/>
+                        <TextComponent.BackLine>NODE JS</TextComponent.BackLine>
+                    </h1> 
                     <p>Passionné par l’informatique, expérience de développeur operateur de 4 ans</p>
                 </Home.PickUpText>
                 <Home.Navigate>
