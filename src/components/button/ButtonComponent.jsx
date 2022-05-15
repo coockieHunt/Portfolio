@@ -32,12 +32,12 @@ export class CTA extends React.Component{
         return rslt
     }
 
-    HandelOnClick({ OnClick }){
+    HandelOnClick(){
         if(this.props.disabled){return null}
     }
 
     render() {
-        const {type, theme, OnClick, icon, children, disabled, className} = this.props;
+        const {type, theme, onClick, icon, children, disabled, className} = this.props;
 
         if(this.TypeIsNotValid(this.props.type)){console.log('🚨 invalid button type: ' + this.props.type); return null}
 
@@ -45,7 +45,7 @@ export class CTA extends React.Component{
         if(ThemeSet === undefined){ThemeSet = BUTTON.defultTheme}
 
         return(
-            <Button type={type} className={className} disabled={disabled} theme={ThemeSet} onClick={OnClick}>
+            <Button type={type} className={className} disabled={disabled} theme={ThemeSet} onClick={onClick}>
                 {children} {icon}
             </Button>
         )

@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import * as Contact from "./style"
 import * as FormComponent from "../../components/form/FormComponent"
 import * as ButtonConponent from "../../components/button/ButtonComponent"
-import * as ModalComponent from "../../components/modal/ModalComponent"
 
 import { 
     IoMdSend, 
@@ -36,13 +35,16 @@ export const ContactPage = () =>{
     }
 
     const handleReset = (e) => {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+           console.log('dark')
+        }
+
         setOutput(DefaultValue);
         e.preventDefault();
     }
 
     return(
         <Contact.Container>
-            <ModalComponent.Modal></ModalComponent.Modal>
             <Contact.Box className='background'>
                 <Contact.Side>
                     <Contact.Title>Information de Contact</Contact.Title>

@@ -69,7 +69,7 @@ export const Nav = styled.div`
         width: 100%;
 
 
-        z-index: 999999;
+        z-index: 1000;
     }
 
 `

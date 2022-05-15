@@ -9,7 +9,7 @@ import {ThemeContext} from './context/ThemeContext';
 //pages
 import NotFoundPage from './pages/Error/NotFoundPage'
 import HomePage from './pages/Home/HomePage'
-import ContactPage from './pages/Contact/ContactPage'
+import {ContactPage} from './pages/Contact/ContactPage'
 import ProjectPage from './pages/Project/ProjectPage'
 import AboutMePage from './pages/about/AboutPage'
 
