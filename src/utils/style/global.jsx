@@ -53,6 +53,14 @@ export const GlobalStyle = createGlobalStyle`
             transition: all 0.5s;
             background-color: white;
         }
+
+        & .contrasting{
+            color: #cecece;
+
+            &:hover{
+                color: #a8a8a8;
+            }
+        }
     }
 
 
@@ -80,6 +88,14 @@ export const GlobalStyle = createGlobalStyle`
 
         & input:focus, & textarea:focus{
             color: white;
+        }
+
+        & .contrasting{
+            color: #303134;
+
+            &:hover{
+                color: #45464a;
+            }
         }
     }
 

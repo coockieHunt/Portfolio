@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import colors from "../../../utils/style/library/color";
 import { BUTTON } from "../../../config"
-import {useNavigate} from 'react-router-dom';
-
 
 export const Button = styled.button`
+    display: flex;
+    align-items: center;
     padding : 15px;
     color: ${colors.white};
 
@@ -16,6 +16,9 @@ export const Button = styled.button`
     background-color: ${props => BUTTON.theme[props.theme].backgroundColor}; ;
     border-radius: ${props => BUTTON.theme[props.theme].borderRadius}; ;
 
+    & svg{
+        margin-left: 5px;
+    }
     &:disabled{
         background-color: ${colors.grey};
         cursor: not-allowed;
@@ -56,6 +59,10 @@ export const Cp= styled.div`
 
 export const Img = styled.a `
     color: ${props => props.color !== undefined ? props.color : colors.primary};
+
+    &:hover{
+        opacity: 75%;
+    }
 `;
 
 

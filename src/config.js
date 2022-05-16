@@ -70,5 +70,12 @@ export const BUTTON={
             "HoverColor": '#E5B700',
             "borderRadius": "3px"
         },
+        
+        "ok" : {
+            "backgroundColor" : '#25b33a',
+            "gradiant": "",
+            "HoverColor": '#3eb54f',
+            "borderRadius": "3px"
+        },
     }
 }

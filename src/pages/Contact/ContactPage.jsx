@@ -1,5 +1,10 @@
 import React, {useState} from 'react';
 
+
+//modal
+import useModal from '../../hooks/useModal'
+import { Modal } from '../../components/modal/ModalComponent'
+
 import * as Contact from "./style"
 import * as FormComponent from "../../components/form/FormComponent"
 import * as ButtonConponent from "../../components/button/ButtonComponent"
@@ -7,12 +12,9 @@ import * as ButtonConponent from "../../components/button/ButtonComponent"
 import { 
     IoMdSend, 
     IoIosCall,
-    IoIosMail
+    IoIosMail,
+    IoMdCheckmark
 } from 'react-icons/io';
-
-import {
-    ImCross
-} from 'react-icons/im'
 
 export const ContactPage = () =>{
     let DefaultValue = {
@@ -23,6 +25,7 @@ export const ContactPage = () =>{
     }
 
     const [output, setOutput] = useState(DefaultValue)
+    const { isShowing, toggle } = useModal();
 
     const handleChange = (e) => {
         setOutput(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -35,91 +38,101 @@ export const ContactPage = () =>{
     }
 
     const handleReset = (e) => {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-           console.log('dark')
-        }
-
         setOutput(DefaultValue);
-        e.preventDefault();
     }
 
     return(
-        <Contact.Container>
-            <Contact.Box className='background'>
-                <Contact.Side>
-                    <Contact.Title>Information de Contact</Contact.Title>
-                    <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
-                    <Contact.Other>
-                        <Contact.Option>
-                            <IoIosCall/> 
-                            <span>+33 603420204</span>
-                        </Contact.Option>
-                        <Contact.Option>
-                            <IoIosMail/> 
-                            <span>pro.jonathan.gleyze@gmail.com</span> 
-                        </Contact.Option>
+        <>
+            <Contact.Container>
+                <Contact.Box className='background'>
+                    <Contact.Side>
+                        <Contact.Title>Information de Contact</Contact.Title>
+                        <Contact.BaseLine>Remplissez ce formulaire, je vous repondrée le plus rapidement possible.</Contact.BaseLine>
+                        <Contact.Other>
+                            <Contact.Option>
+                                <IoIosCall/> 
+                                <span>+33 603420204</span>
+                            </Contact.Option>
+                            <Contact.Option>
+                                <IoIosMail/> 
+                                <span>pro.jonathan.gleyze@gmail.com</span> 
+                            </Contact.Option>
+                            
+
+                        </Contact.Other>
+                        <p>À votre disposition pour toute question.</p>
+                    </Contact.Side>
+                    <Contact.Form>
+                        <FormComponent.Groupe >
+                            <FormComponent.Inline>
+                                <FormComponent.InputText 
+                                    name="firsName"
+                                    value={output.firsName} 
+                                    onChange={handleChange}
+                                    label="Prenon"
+                                    placeHolder="jhon"
+                                    required
+                                /> 
+                                <FormComponent.InputText 
+                                    name="lastname" 
+                                    value={output.lastname} 
+                                    onChange={handleChange}
+                                    label="nom"
+                                    placeHolder="doe"
+                                /> 
+                            </FormComponent.Inline>
                         
-
-                    </Contact.Other>
-                    <p>À votre disposition pour toute question.</p>
-                </Contact.Side>
-                <Contact.Form>
-                    <FormComponent.Groupe >
-                        <FormComponent.Inline>
-                            <FormComponent.InputText 
-                                name="firsName"
-                                value={output.firsName} 
+                            <FormComponent.InputEmail 
+                                name="email" 
+                                value={output.email} 
                                 onChange={handleChange}
-                                label="Prenon"
-                                placeHolder="jhon"
+                                placeHolder="secteur@domaine.fr"
+                                label= "email"
                                 required
-                            /> 
-                            <FormComponent.InputText 
-                                name="lastname" 
-                                value={output.lastname} 
-                                onChange={handleChange}
-                                label="nom"
-                                placeHolder="doe"
-                            /> 
-                        </FormComponent.Inline>
-                    
-                        <FormComponent.InputEmail 
-                            name="email" 
-                            value={output.email} 
-                            onChange={handleChange}
-                            placeHolder="secteur@domaine.fr"
-                            label= "email"
-                            required
-                        />
+                            />
 
-                        <FormComponent.InputTextArea 
-                            name="message"
-                            value={output.message} 
-                            onChange={handleChange}
-                            label= "message"
-                            placeHolder="Votre message ..."
-                            required
-                        />
-                        <Contact.CTA>
-                            <ButtonConponent.CTA 
-                                disabled={false} 
-                                type="button"
-                                icon= {<ImCross/>}
-                                onClick={handleReset}
-                                theme= "warning">
-                            Annuler
-                            </ButtonConponent.CTA>
-                            <ButtonConponent.CTA 
-                                disabled={false} 
-                                type="submit"
-                                icon= {<IoMdSend/>}
-                                onClick={handleSubmit}>
-                            Envoyer
-                            </ButtonConponent.CTA>
-                        </Contact.CTA>
-                    </FormComponent.Groupe>
-                </Contact.Form>
-            </Contact.Box>
-        </Contact.Container>
+                            <FormComponent.InputTextArea 
+                                name="message"
+                                value={output.message} 
+                                onChange={handleChange}
+                                label= "message"
+                                placeHolder="Votre message ..."
+                                required
+                            />
+                            <Contact.CTA>
+                                <Contact.Reset onClick={toggle} className="contrasting">Remettre a zero</Contact.Reset>
+                                <ButtonConponent.CTA 
+                                    disabled={false} 
+                                    type="submit"
+                                    icon= {<IoMdSend/>}
+                                    onClick={handleSubmit}>
+                                Envoyer
+                                </ButtonConponent.CTA>
+                            </Contact.CTA>
+                        </FormComponent.Groupe>
+                    </Contact.Form>
+                </Contact.Box>
+            </Contact.Container>
+            <Modal 
+                title="Info" 
+                isShowing={isShowing} 
+                hide={toggle} 
+                footer={
+                    <>
+                        <Contact.Reset onClick={toggle} className="contrasting">Annuler</Contact.Reset>
+
+                        <ButtonConponent.CTA 
+                            disabled={false} 
+                            type="button"
+                            onClick={() => {toggle(); handleReset()}}
+                            icon={<IoMdCheckmark/>}
+                            theme="ok">
+                        </ButtonConponent.CTA>
+                    </>
+                  
+                }> 
+                    <p>Êtes-vous sûr de vouloir, remette le formulaire a zero ?</p>
+            </Modal>
+        </>
     )
 }

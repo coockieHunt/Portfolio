@@ -106,8 +106,13 @@ export const Option = styled.div`
 export const CTA = styled.div`
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 
     margin-top: 15px;
+`
+
+export const Reset = styled.div`
+   font-weight: bold;
+   cursor: pointer;
 `
 

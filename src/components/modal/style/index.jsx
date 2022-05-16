@@ -12,6 +12,7 @@ export const Box = styled.div`
     width: 30%;
     border-bottom: 1px solid ${colors.primary_a};
     border-radius: 10px;
+    overflow: hidden;
 
     @media ${device.laptop} { 
         width: 80%;
@@ -21,11 +22,12 @@ export const Box = styled.div`
 
 export const Title = styled.div`
     border-bottom: 1px solid ${colors.primary_a};
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+
+    background-color: ${colors.primary};
 
 `
 
@@ -57,8 +59,6 @@ export const Close = styled.div`
 
         &::after{transform: rotate(-45deg);}
         &::before{transform: rotate(45deg);}
-
-
     }
 `
 
@@ -71,4 +71,14 @@ export const Background = styled.div`
     background-color: rgba(1,1,1, 0.75);
     width: 100vw;
     height: 100vh;
+`
+
+export const Footer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid ${colors.primary_a};
+
+    padding: 12px 15px;
 `
