@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 
-
 //modal
 import useModal from '../../hooks/useModal'
 import { Modal } from '../../components/modal/ModalComponent'
+
+//toast alert
+import useToast from '../../hooks/useToast';
+import * as Toast from '../../components/toast/toastComponent'
 
 import * as Contact from "./style"
 import * as FormComponent from "../../components/form/FormComponent"
@@ -25,7 +28,8 @@ export const ContactPage = () =>{
     }
 
     const [output, setOutput] = useState(DefaultValue)
-    const { isShowing, toggle } = useModal();
+    const { isShowingModal, toggleModal } = useModal();
+    const { isShowingToast, toggleToast } = useToast();
 
     const handleChange = (e) => {
         setOutput(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -35,6 +39,7 @@ export const ContactPage = () =>{
         console.log(JSON.stringify(output))
         setOutput(DefaultValue);
         e.preventDefault();
+        toggleToast();
     }
 
     const handleReset = (e) => {
@@ -100,7 +105,7 @@ export const ContactPage = () =>{
                                 required
                             />
                             <Contact.CTA>
-                                <Contact.Reset onClick={toggle} className="contrasting">Remettre a zero</Contact.Reset>
+                                <Contact.Reset onClick={toggleModal} className="contrasting">Remettre a zero</Contact.Reset>
                                 <ButtonConponent.CTA 
                                     disabled={false} 
                                     type="submit"
@@ -113,18 +118,24 @@ export const ContactPage = () =>{
                     </Contact.Form>
                 </Contact.Box>
             </Contact.Container>
+            <Toast.Bottom
+                isShowing={isShowingToast} 
+                hide={toggleToast}
+                color='green'>
+            Message envoyer
+            </Toast.Bottom>
             <Modal 
                 title="Info" 
-                isShowing={isShowing} 
-                hide={toggle} 
+                isShowing={isShowingModal} 
+                hide={toggleModal} 
                 footer={
                     <>
-                        <Contact.Reset onClick={toggle} className="contrasting">Annuler</Contact.Reset>
+                        <Contact.Reset onClick={toggleModal} className="contrasting">Annuler</Contact.Reset>
 
                         <ButtonConponent.CTA 
                             disabled={false} 
                             type="button"
-                            onClick={() => {toggle(); handleReset()}}
+                            onClick={() => {toggleModal(); handleReset()}}
                             icon={<IoMdCheckmark/>}
                             theme="ok">
                         </ButtonConponent.CTA>
