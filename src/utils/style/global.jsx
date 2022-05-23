@@ -99,6 +99,20 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    /* scroolbar */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #202020;
+    }
+
+    *::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #5943e4;
+        border-radius: 5px;
+    }
 
 `
 /*
