@@ -119,7 +119,7 @@ export class CP extends React.Component{
  export function NavImg(props) {
   
     return (
-        <Img href={props.to} color={props.color}>{props.icon}</Img>
+        <Img className="accentuatedHover" clahref={props.to} color={props.color}>{props.icon}</Img>
     );
 }
 

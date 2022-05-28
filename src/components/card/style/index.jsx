@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "../../../utils/style/library/size";
 import shadow from "../../../utils/style/library/shadow";
 import colors from "../../../utils/style/library/color";
 
@@ -30,7 +29,6 @@ export const Container = styled.div`
 `
 
 export const Header = styled.div`
-    width: 100%;
     position: absolute;
 
     & h2{

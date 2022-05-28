@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
-import styled from "styled-components";
 import Roboto from '../font/roboto/Roboto-Regular.ttf';
-import colors from '../style/library/color'
+import inter_variable from '../font/inter/Inter-VariableFont_slnt,wght.ttf';
+import colors, {theme}from '../style/library/color'
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -11,33 +11,40 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
     }
 
+    @font-face {
+        font-family: 'inter_variable';
+        src: url(${inter_variable}) format('inter_variable');
+        font-style: normal;
+    }
+
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Roboto', Helvetica, sans-serif;
+        font-family: 'inter_variable', Helvetica, sans-serif;
     }
 
     ul, li{
         list-style: none;
     }
-    
-    .middel {
-        vertical-align: middle;
-    }
 
-    .NoMargin{
-        margin: 0 !important;
-    }
-
-    h1{
-        color: ${colors.primary}
-    }
 
     p{
         font-weight: 200;
     }
 
+
+    li{
+        padding-left: 15px;
+
+        &::before{
+            content: '#';
+            color: ${colors.primary};
+            padding-right: 5px;
+        }
+    }
+
+    //THEME
     body[data-theme='light']{
         transition: all 0.5s;
         background-color: white ;
@@ -46,7 +53,12 @@ export const GlobalStyle = createGlobalStyle`
 
         & .background{
             transition: all 0.5s;
-            background-color: white;
+            background-color: ${theme.light.accentuated};
+        }
+
+
+        & .accentuatedHover:hover{
+            background-color: ${theme.light.accentuated};
         }
 
         & input, & textarea{
@@ -63,7 +75,6 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-
     body[data-theme='dark']{
         transition: all 0.5s;
         background-color:  #121212  ;
@@ -72,11 +83,15 @@ export const GlobalStyle = createGlobalStyle`
 
         & .background{
             transition: all 0.5s;
-            background-color: #202020;
+            background-color: ${theme.dark.accentuated};
         }
 
         & .backgroundInvert, & .backgroundInvert:after, & .backgroundInvert:before{
             background-color: white;
+        }
+
+        & .accentuatedHover:hover{
+            background-color: ${theme.dark.accentuated};
         }
 
         & input, & textarea{
@@ -113,16 +128,4 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #5943e4;
         border-radius: 5px;
     }
-
-`
-/*
-    ? main constainer
-*/
-export const MainContainerStyle = styled.div`
-    margin: auto;
-    display:flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-    height: 93vh;
 `

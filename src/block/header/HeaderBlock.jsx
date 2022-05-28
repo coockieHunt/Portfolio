@@ -4,8 +4,7 @@ import * as Header from "./style"
 import * as NavComponent from "../../components/link/LinkComponent"
 import * as ButtonUtilsComponent from '../../components/button/ButtonUtilsComponent';
 import * as ButtonUComponent from '../../components/button/ButtonComponent';
-import {TogglerDarkMode}  from '../../components/button/ButtonUtilsComponent'
-
+import {TogglerDarkModeSvg}  from '../../components/button/ButtonUtilsComponent'
 
 import {size_Width} from '../../utils/style/library/size'
 
@@ -94,7 +93,7 @@ export default class HeaderComponents extends React.Component{
                 </Header.Left>
 
                 <Header.Right>
-                    <TogglerDarkMode/>
+                    <TogglerDarkModeSvg/>
 
                     <ButtonUComponent.NavImg
                         icon={<IoLogoDeviantart/>}
@@ -107,7 +106,6 @@ export default class HeaderComponents extends React.Component{
                         to= {SOCIAL_LINK.GitHub}
                         color='#6e5494'
                     />
-                   
 
                     {(screenWidth < BreakPointSize) && (
                         <ButtonUtilsComponent.Burger OnClick={this.ShowHide} ActiveNav={toggleNav} className="backgroundInvert"/>

@@ -13,3 +13,15 @@ export class BackLine extends React.Component{
         )
     }
 }
+
+export class Accentuate extends React.Component{
+    render() {
+        const {children} = this.props;
+        
+        return(
+            <Text.Accentuate>
+                {children}
+            </Text.Accentuate>
+        )
+    }
+}

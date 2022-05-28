@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 
 //global style
-import {GlobalStyle, MainContainerStyle} from './utils/style/global';
+import {GlobalStyle} from './utils/style/global';
 import {ThemeContext} from './context/ThemeContext';
 
 //pages
@@ -22,19 +22,6 @@ const container = document.getElementById('root')
 const Root = createRoot(container)
 
 
-function MainContainer(props){
-    const location = useLocation()
-
-    useEffect(() => {
-    }, [location])
-    
-    return(
-        <MainContainerStyle>
-            {props.children} 
-        </MainContainerStyle>
-    )
-}
-
 function GlobalStyleTheme(props){
     const {theme} = useContext(ThemeContext)
     let themeType = null;
@@ -50,7 +37,6 @@ Root.render(
         <ThemeContextProvider>
             <GlobalStyleTheme/>
             <HeaderComponents/>
-            <MainContainer>
                 <Routes>
                     <Route path="/" element={<HomePage />}/>
                     <Route path="/contact" element={<ContactPage />} />
@@ -60,7 +46,6 @@ Root.render(
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
                 <FooterConponents />
-            </MainContainer>
         </ThemeContextProvider>
     </BrowserRouter>,
 );

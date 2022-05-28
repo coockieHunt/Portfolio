@@ -9,5 +9,14 @@ const colors = {
     grey: '#737272',
 }
 
+export const theme = {
+    light: {
+        accentuated: '#d9d1ca',
+    },
+    dark: {
+        accentuated: '#202020',
+    },
+}
+
 export default colors
   

@@ -2,22 +2,32 @@ import styled from "styled-components";
 import colors from "../../../utils/style/library/color";
 import { device } from "../../../utils/style/library/size";
 
+// MAIN
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+
+//HELLO SECTION
+export const Hello = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 90vh;
-
+    height: 95vh;
+    
     @media ${device.laptop} { 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        height: 74vh;
     }
-`;
+    
+`
 
 export const PickUp  = styled.div`
-    width: 40%;
 
     @media ${device.laptop} { 
         width: 70%;
@@ -27,11 +37,12 @@ export const PickUp  = styled.div`
 export const PickUpText  = styled.div`
     & h1{
         text-align: left;
-        font-size: 2em;
+        margin-bottom: 10px;
+        line-height: 1.3em;
+
         @media ${device.laptop} { 
             text-align: center;
         }
-        margin-bottom: 10px;
     }
 
     & p{
@@ -49,12 +60,10 @@ export const PickUpText  = styled.div`
     }
 `;
 
-
 export const PickUpSide  = styled.div`
     font-size: 10em;
     text-align: center;
     user-select:none;
-
 `;
 
 export const PickUpLogo = styled.img `
@@ -67,7 +76,6 @@ export const PickUpLogo = styled.img `
     }
 `;
 
-
 export const Navigate = styled.div `
     display:flex;
     justify-content: flex-start;
@@ -78,3 +86,5 @@ export const Navigate = styled.div `
         justify-content: center;
     }
 `
+
+//SKILL SECTION

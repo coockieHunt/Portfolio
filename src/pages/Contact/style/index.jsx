@@ -5,7 +5,7 @@ import { device } from "../../../utils/style/library/size";
 
 
 export const Container = styled.div`
-    height: 95%;
+    height: 85vh;
     width: 90%;
     margin: auto;
 

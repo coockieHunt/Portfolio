@@ -62,8 +62,6 @@ export const ContactPage = () =>{
                                 <IoIosMail/> 
                                 <span>pro.jonathan.gleyze@gmail.com</span> 
                             </Contact.Option>
-                            
-
                         </Contact.Other>
                         <p>À votre disposition pour toute question.</p>
                     </Contact.Side>

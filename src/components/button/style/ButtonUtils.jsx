@@ -59,8 +59,8 @@ export const BurgerBox = styled.div`
     }
 `
 
-// ? Toggle theme
-export const ToggleContainer = styled.div`
+// ? Toggle theme swtich
+export const ToggleContainerSwitch = styled.div`
     position: relative;
     width: 60px;
     height: 30px;
@@ -110,4 +110,35 @@ export const Togglelabel = styled.div`
     &.active:after{
         transform: translate(30px);
     }
+`
+
+export const ToggleContainerSvg = styled.div`
+    position: relative;
+    width: 25px;
+    height: 25px;
+`
+
+export const ToggleSvg = styled.div`
+    width: 25px;
+    height: 25px;
+
+    opacity: 100%;
+    border-radius: 50%;
+
+    & svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 70%;
+
+        transition: 0.4s opacity;
+    }
+
+    & .hide{
+        opacity: 0%;
+    }
+
+
 `

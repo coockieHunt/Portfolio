@@ -16,3 +16,8 @@ export const BackLine = styled.span `
         margin-top:0px;
     }
 `
+
+export const Accentuate = styled.strong `
+    color: ${colors.primary};
+    font-size: 1.1em;
+`

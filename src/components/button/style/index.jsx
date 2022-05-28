@@ -52,16 +52,18 @@ export const Cp= styled.div`
         cursor: pointer;
 
         &:hover{
-            background-color: ${colors.secondary} ;
+            background-color: ${colors.secondary};
         }
     }
 `;
 
 export const Img = styled.a `
     color: ${props => props.color !== undefined ? props.color : colors.primary};
+    padding: 5px;
+    border-radius: 50%;
 
     &:hover{
-        opacity: 75%;
+        background-color: #202020;
     }
 `;
 
