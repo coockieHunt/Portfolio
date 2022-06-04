@@ -5,3 +5,9 @@
 .TextBold{
     font-weight: bold;
 }
+
+.CenterContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
