@@ -13,8 +13,8 @@ export const Button = styled.button`
     user-select: none;
     text-transform: uppercase;
 
-    background-color: ${props => BUTTON.theme[props.theme].backgroundColor}; ;
-    border-radius: ${props => BUTTON.theme[props.theme].borderRadius}; ;
+    background-color: ${props => BUTTON.theme[props.theme].backgroundColor};
+    border-radius: ${props => BUTTON.theme[props.theme].borderRadius};
 
     & svg{
         margin-left: 5px;
@@ -29,7 +29,7 @@ export const Button = styled.button`
             background-color: ${colors.grey};
         }
         
-        background-color: ${props => BUTTON.theme[props.theme].HoverColor}; ;
+        background-color: ${props => BUTTON.theme[props.theme].HoverColor};
     }
 `;
 
