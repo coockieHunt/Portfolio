@@ -6,12 +6,12 @@ export class SplitLayout extends React.Component{
         return(
             <>
                 <SplitLayourStyle.SplitLayout>
-                    <SplitLayourStyle.SplitLayoutLeft>
+                    <SplitLayourStyle.SplitLayoutLeft leftWidth={this.props.leftWidth}>
                         <div className="content">
                             {this.props.left}
                         </div>
                     </SplitLayourStyle.SplitLayoutLeft>
-                    <SplitLayourStyle.SplitLayoutRight>
+                    <SplitLayourStyle.SplitLayoutRight rightWidth={this.props.rightWidth}>
                         <div className="content">
                             {this.props.right}
                         </div>

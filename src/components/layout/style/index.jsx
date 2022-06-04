@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const SplitLayout = styled.div`
     display: flex;
-
+    background-color: ${props => props.bg};
     & div{
-        width: 50%;
 
         & > .content{
             padding: 15px;
@@ -13,8 +12,9 @@ export const SplitLayout = styled.div`
 `
 
 export const SplitLayoutLeft = styled.div`
+    width: ${props => props.leftWidth ? props.leftWidth : null};
 `
 
 export const SplitLayoutRight = styled.div`
-
+    width: ${props => props.rightWidth? props.rightWidth : null};
 `
