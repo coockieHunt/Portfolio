@@ -8,6 +8,7 @@ import * as LayoutComponent from '../../components/layout/LayoutComponent'
 import '../../utils/style/library/helper.css'
 
 import NodeLogo from '../../utils/img/logo/Node.js_light.svg'
+import HomeSheet from '../../utils/img/logo/home_sheet.png'
 
 function HomePage(){
     return(
@@ -43,20 +44,23 @@ function HomePage(){
                 </Home.Hello>
                 <SectionConponent.Section id="one">
                     <LayoutComponent.SplitLayout 
+                        lefttWidth={'30%'}
                         left={
-                            <>
-                                <h1><TextComponent.Accentuate>My skill</TextComponent.Accentuate></h1>
-                                <p className='TextSpace'>Dolor id cillum dolore eu laborum laboris dolore ipsum sunt. Et commodo nulla reprehenderit nostrud et aliqua consectetur :</p>
+                            <Home.TextSkill>
+                                <h1><TextComponent.Accentuate>PASSIONNÉE</TextComponent.Accentuate> par de nombreuse domaine</h1>
+                                <p className='TextSpace'>Proident aliquip labore cupidatat deserunt nostrud proident incididunt nisi ullamco. Commodo laborum id eiusmod et amet incididunt adipisicing. Occaecat amet adipisicing enim aliquip. Incididunt adipisicing eiusmod velit ex pariatur commodo sit laborum enim. Anim sit labore sint ea est consequat eu.</p>
                                 <ul className="TextBold">
                                     <li className='TextSpace'>Développement</li>
                                     <li>3D</li>
-                                    <li>électronique</li>
+                                    <li>Électronique</li>
                                 </ul>
-                            </>
+                            </Home.TextSkill>
                         }
-
+                        rightWidth={'70%'}
                         right={
-                           <p>PLACE SVG HERE</p>
+                            <div className='CenterContent'>
+                                <Home.SkillImg src={HomeSheet}/>
+                            </div>
                         }
                     />
                 </SectionConponent.Section>

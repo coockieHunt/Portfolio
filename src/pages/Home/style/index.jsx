@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import colors from "../../../utils/style/library/color";
-import { device } from "../../../utils/style/library/size";
+import { device, device_Height } from "../../../utils/style/library/size";
 
 // MAIN
 export const Container = styled.div`
@@ -87,4 +87,30 @@ export const Navigate = styled.div `
     }
 `
 
-//SKILL SECTION
+//IMG
+export const SkillImg = styled.img``
+
+export const TextSkill = styled.div`
+    width: 50%;
+    padding: 50px 0 0 70px;
+
+    @media ${device_Height.tablet} {
+        width: 90%;
+        padding: 20px 0 0 20px;
+    }
+
+    & h1{
+        font-size: 40px;
+    }
+
+    & p{
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    & ul li{
+        font-size: 22px;
+        font-weight: lighter;
+        margin-top: 20px;
+    }
+`
